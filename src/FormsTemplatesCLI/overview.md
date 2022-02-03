@@ -21,7 +21,7 @@ dotnet new --update-apply
 Use the below .NET CLI command to create the project, pages, and views out these templates:
 
 ```shell
-dotnet new formsclasslib` -n MyApp.Core
+dotnet new formsclasslib -n MyApp.Core
 ```
 ```shell
 dotnet new forms-page -n LoginPage -na MyApp.Views
