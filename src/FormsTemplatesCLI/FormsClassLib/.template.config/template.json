@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json.schemastore.org/template",
+    "author": "Vijay Anand E G",
+    "defaultName": "FormsClassLib1",
+    "classifications": [
+        "Android",
+        "iOS",
+        "UWP",
+        "Windows",
+        "Xamarin.Forms",
+        "Library"
+    ],
+    "identity": "VijayAnand.FormsClassLib",
+    "description": "A project template for Xamarin.Forms 5 Class Library (ver. 5.0.0.2337)",
+    "name": "Xamarin.Forms 5 Class Library",
+    "shortName": "formsclasslib",
+    "sourceName": "FormsClassLib",
+    "primaryOutputs": [
+        {
+            "path": "Class1.cs"
+        }
+    ],
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    }
+}
