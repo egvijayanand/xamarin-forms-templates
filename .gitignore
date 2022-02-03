@@ -348,3 +348,11 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/src/FormsTemplatesCLI/PackageName.txt
+/src/FormsTemplatesCLI/PackageVersion.txt
+/src/FormsTemplatesCLI/Push-Release-Template.bat
+/src/FormsTemplatesCLI/Uninstall-Template.bat
+/src/FormsTemplatesCLI/Create-Debug-Template.bat
+/src/FormsTemplatesCLI/Create-Release-Template.bat
+/src/FormsTemplatesCLI/Install-Debug-Template.bat
+/src/FormsTemplatesCLI/Install-Release-Template.bat

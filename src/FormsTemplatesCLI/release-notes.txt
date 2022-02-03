@@ -1,0 +1,5 @@
+What's new in ver. 1.0.0:
+
+Initial release of Xamarin.Forms Class Library template.
+
+And it targets Xamarin.Forms 5.0 Service Release 9 (ver. 5.0.0.2337).
