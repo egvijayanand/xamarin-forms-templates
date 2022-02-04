@@ -1,5 +1,7 @@
 ### CLI Project and Item Templates for developing Xamarin.Forms App that runs on iOS, Android, and Windows
 
+[![VijayAnand.FormsTemplates - NuGet Package](https://badgen.net/nuget/v/VijayAnand.FormsTemplates/)](https://www.nuget.org/packages/VijayAnand.FormsTemplates/)
+
 Project template for Xamarin.Forms Class Library and is named as `formsclasslib`
 
 Item templates for ContentPage, ContentView, and ShellPage in XAML and named as `forms-page`, `forms-view`, and `forms-shell` respectively.
