@@ -1,5 +1,13 @@
-What's new in ver. 1.0.0:
+What's new in ver. 1.1.0:
 
-Initial release of Xamarin.Forms Class Library template.
+Introduced the ability to include the officially supported Xamarin.CommunityToolkit, Xamarin.CommunityToolkit.Markup or both NuGet package references while creating a new Xamarin.Forms class library project.
 
-And it targets Xamarin.Forms 5.0 Service Release 9 (ver. 5.0.0.2337).
+Note: v2.0.0 is the NuGet package version being added out-of-the-box.
+
+Introduced an item template for Xamarin.Forms Resource Dictionary (with and without code-behind).
+
+Known Limitations:
+------------------
+While using the .NET CLI Templates within Visual Studio IDE, the last used values of the project options like the above ones are retained in the consecutive iteration rather than defaulting to their original values as defined by the developer.
+
+Have already reported this issue to the VS product team and is actively being followed up, until this is clarified / fixed, requesting the users to make of this feature with bit of caution.
