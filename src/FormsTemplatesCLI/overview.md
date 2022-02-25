@@ -2,9 +2,9 @@
 
 Project template for Xamarin.Forms Class Library and is named as `formsclasslib`
 
-Item templates for ContentPage, ContentView, and ShellPage in XAML and named as `forms-page`, `forms-view`, and `forms-shell` respectively.
+Item templates for ContentPage, ContentView, ShellPage, and ResourceDictionary in XAML and named as `forms-page`, `forms-view`, `forms-shell`, and `forms-resdict` respectively.
 
-Project template currently target Xamarin.Forms 5.0 Service Release 9 (ver. 5.0.0.2337).
+All of these templates currently target Xamarin.Forms 5.0 Service Release 9 (ver. 5.0.0.2337).
 
 To install the template NuGet package, use the below .NET CLI command:
 
@@ -16,21 +16,51 @@ If you've already installed this package, then it can be updated to the latest v
 
 ```shell
 dotnet new --update-check
+```
+```shell
 dotnet new --update-apply
 ```
+
 Use the below .NET CLI command to create the project, pages, and views out these templates:
 
 ```shell
 dotnet new formsclasslib -n MyApp.Core
 ```
+
+Class library project templates take the below optional parameters to include the official CommunityToolkit NuGet packages:
+
+* `-it` | `--include-toolkit` - Default value is false
+* `-im` | `--include-markup` - Default value is false
+
+```shell
+dotnet new formsclasslib -n MyApp.UI -it -im
+```
+
+Page:
 ```shell
 dotnet new forms-page -n LoginPage -na MyApp.Views
 ```
+
+View:
 ```shell
 dotnet new forms-view -n CardView -na MyApp.Views
 ```
+
+Shell:
 ```shell
 dotnet new forms-shell -n AppShell -na MyApp
+```
+
+Resource Dictionary:
+
+With C# code-behind file:
+```shell
+dotnet new forms-resdict -n DarkTheme -na MyApp.Themes
+```
+
+Without C# code-behind file - Xaml Only (Option can be `-xo` or `--xaml-only`):
+```shell
+dotnet new forms-resdict -n DarkTheme -na MyApp.Themes -xo
 ```
 Here `-n` denotes the name of the project/page/view that is to be created (for pages/views, don't need to suffix it with .xaml, it will be added automatically) (Can also be specified as `--name`). 
 

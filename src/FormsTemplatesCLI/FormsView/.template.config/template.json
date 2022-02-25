@@ -7,7 +7,8 @@
         "iOS",
         "UWP",
         "Windows",
-        "Xamarin.Forms"
+        "Xamarin.Forms",
+        "Xaml"
     ],
     "identity": "VijayAnand.FormsView",
     "description": "An item template for Xamarin.Forms ContentView in XAML",

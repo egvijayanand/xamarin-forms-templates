@@ -7,9 +7,11 @@
         "iOS",
         "UWP",
         "Windows",
-        "Xamarin.Forms"
+        "Xamarin.Forms",
+        "Xaml"
     ],
     "identity": "VijayAnand.FormsShell",
+    "groupIdentity": "VijayAnand.FormsTemplates.Shell",
     "description": "An item template for Xamarin.Forms ShellPage in XAML",
     "name": "Xamarin.Forms ShellPage",
     "shortName": "forms-shell",

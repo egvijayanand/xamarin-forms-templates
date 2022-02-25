@@ -7,9 +7,11 @@
         "iOS",
         "UWP",
         "Windows",
-        "Xamarin.Forms"
+        "Xamarin.Forms",
+        "Xaml"
     ],
     "identity": "VijayAnand.FormsPage",
+    "groupIdentity": "VijayAnand.FormsTemplates.Page.Xaml",
     "description": "An item template for Xamarin.Forms ContentPage in XAML",
     "name": "Xamarin.Forms ContentPage",
     "shortName": "forms-page",

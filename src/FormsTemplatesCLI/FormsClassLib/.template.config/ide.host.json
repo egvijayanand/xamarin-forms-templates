@@ -1,3 +1,22 @@
 {
-    "$schema": "http://json.schemastore.org/vs-2017.3.host"
+    "$schema": "http://json.schemastore.org/vs-2017.3.host",
+    "icon": "ide/icon.png",
+    "symbolInfo": [
+        {
+            "id": "include-toolkit",
+            "name": {
+                "text": "Add Xamarin.Community_Toolkit NuGet package reference"
+            },
+            "isVisible": true,
+            "defaultValue": "false"
+        },
+        {
+            "id": "include-markup",
+            "name": {
+                "text": "Add Xamarin.CommunityToolkit._Markup NuGet package reference"
+            },
+            "isVisible": true,
+            "defaultValue": "false"
+        }
+    ]
 }
