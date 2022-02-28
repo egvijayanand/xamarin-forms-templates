@@ -8,21 +8,23 @@
 
 #### Access within Visual Studio IDE
 
+Installation:
+
 ![Install from VS Marketplace](images/xamarin-forms-vs-extension.png)
+
+Project Template Listing:
 
 ![Xamarin.Forms Class Library Project Template](images/xamarin-forms-class-library.png)
 
+Project Options:
+
 ![Xamarin.Forms Class Library - Project Options](images/xamarin-forms-class-library-options.png)
+
+Item Templates:
 
 ![Xamarin.Forms - Item Templates](images/xamarin-forms-item-templates.png)
 
 #### Access via CLI
-
-Project template for Xamarin.Forms Class Library and is named as `formsclasslib`
-
-Project template currently target Xamarin.Forms 5.0 Service Release 9 (ver. 5.0.0.2337).
-
-Item templates for ContentPage, ContentView, ShellPage, and ResourceDictionary in XAML and named as `forms-page`, `forms-view`, `forms-shell`, and `forms-resdict` respectively.
 
 To install the template NuGet package, use the below .NET CLI command:
 
@@ -38,6 +40,12 @@ dotnet new --update-check
 ```shell
 dotnet new --update-apply
 ```
+Project template for Xamarin.Forms Class Library and is named as `formsclasslib`
+
+And it currently targets Xamarin.Forms 5.0 Service Release 9 (ver. 5.0.0.2337).
+
+Item templates for `ContentPage`, `ContentView`, `ShellPage`, and `ResourceDictionary` in XAML and named as `forms-page`, `forms-view`, `forms-shell`, and `forms-resdict` respectively.
+
 Use the below .NET CLI command to create the project, pages, and views out these templates:
 
 ```shell
