@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="XFormsTemplates.2924dcc2-7ffd-4b48-8828-c830a2fab6e0" Version="1.0.0.0" Language="en-US" Publisher="Vijay Anand E G" />
+        <DisplayName>Xamarin.Forms Project and Item Templates</DisplayName>
+        <Description xml:space="preserve">Xamarin.Forms Project and Item Templates for building native apps for iOS, Android, UWP, macOS, Tizen from a single, shared C# codebase.</Description>
+        <MoreInfo>https://egvijayanand.in/</MoreInfo>
+        <License>license.txt</License>
+        <GettingStartedGuide>https://github.com/egvijayanand/xamarin-forms-templates</GettingStartedGuide>
+        <ReleaseNotes>release-notes.txt</ReleaseNotes>
+        <Icon>Resources\Icon.png</Icon>
+        <PreviewImage>Resources\Icon.png</PreviewImage>
+        <Tags>Xamarin.Forms, Mobile, iOS, Android, UWP, Desktop, Windows, Templates, Shell, Library, Visual Studio, Resource Dictionary, Xamarin, macOS, Tizen</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Pro">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+    </Installation>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Component.Xamarin" Version="[17.0,18.0)" DisplayName="Xamarin" />
+    </Prerequisites>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" TargetVersion="[17.0,18.0)" d:TargetPath="ItemTemplates\FormsResDict.zip" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" TargetVersion="[17.0,18.0)" d:TargetPath="ItemTemplates\FormsResDictXaml.zip" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" TargetVersion="[17.0,18.0)" d:TargetPath="ItemTemplates\FormsShell.zip" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="NuGetTemplates.pkgdef" />
+    </Assets>
+</PackageManifest>

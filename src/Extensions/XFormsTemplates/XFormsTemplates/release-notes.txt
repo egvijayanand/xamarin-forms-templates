@@ -1,0 +1,13 @@
+What's new in ver. 1.0.0.0:
+
+Initial release of Xamarin.Forms Project and Item Templates for building native apps for iOS, Android, UWP, macOS, Tizen from a single, shared C# codebase published as VS extension (VSIX).
+
+This VS extension is loaded with a Project template for creating a Xamarin.Forms Class Library.
+
+This project template has the provision to optionally include the officially supported CommunityToolkit NuGet packages.
+
+And Item templates for (available in the Xamarin.Forms section):
+
+1. Shell Page
+2. Resource Dictionary
+3. Resource Dictionary (XAML only)
