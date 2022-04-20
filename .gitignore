@@ -183,7 +183,8 @@ publish/
 PublishScripts/
 
 # NuGet Packages
-*.nupkg
+# Commented for including project asset
+#*.nupkg
 # NuGet Symbol Packages
 *.snupkg
 # The packages folder can be ignored because of Package Restore

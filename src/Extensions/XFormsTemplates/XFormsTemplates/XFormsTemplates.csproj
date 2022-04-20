@@ -68,7 +68,7 @@
             <IncludeInVSIX>true</IncludeInVSIX>
             <VSIXSubPath>ItemTemplates\Xamarin.Forms</VSIXSubPath>
         </Content>
-        <None Include="Assets\VijayAnand.FormsTemplates.1.1.0.nupkg"/>
+        <None Include="Assets\VijayAnand.FormsTemplates.1.2.0.nupkg"/>
         <None Include="source.extension.vsixmanifest">
             <SubType>Designer</SubType>
             <Generator>VsixManifestGenerator</Generator>
