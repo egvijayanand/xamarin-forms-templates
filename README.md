@@ -54,15 +54,16 @@ Use the below .NET CLI command to create the project, pages, and views out these
 dotnet new formsclasslib -n MyApp.Core
 ```
 
-Class library project templates take the below optional parameters to include the officially supported Xamarin.CommunityToolkit, Xamarin.CommunityToolkit.Markup or both NuGet packages:
+Class library project templates take the below optional parameters to include the officially supported Xamarin.CommunityToolkit, Xamarin.CommunityToolkit.Markup, CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) or all NuGet packages:
 
 * `-it` | `--include-toolkit` - Default value is `false`
 * `-im` | `--include-markup` - Default value is `false`
+* `-imt` | `--include-mvvm-toolkit` - Default value is `false`
 
-Note: `v2.0.0` is the NuGet package version being added out-of-the-box.
+Note: `v2.0.x` is the NuGet package version being added out-of-the-box for Xamarin packages and `v8.0.0-preview3` for MVVM Toolkit package.
 
 ```shell
-dotnet new formsclasslib -n MyApp.UI -it -im
+dotnet new formsclasslib -n MyApp.UI -it -im -imt
 ```
 
 Page:

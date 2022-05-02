@@ -15,5 +15,8 @@
         <!--#if (AddMarkupPackage)-->
         <PackageReference Include="Xamarin.CommunityToolkit.Markup" Version="2.0.1" />
         <!--#endif-->
+        <!--#if (AddMvvmToolkitPackage)-->
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview3" />
+        <!--#endif-->
     </ItemGroup>
 </Project>
