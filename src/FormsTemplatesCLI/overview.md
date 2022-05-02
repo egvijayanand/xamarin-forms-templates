@@ -31,9 +31,10 @@ Class library project templates take the below optional parameters to include th
 
 * `-it` | `--include-toolkit` - Default value is false
 * `-im` | `--include-markup` - Default value is false
+* `-imt` | `--include-mvvm-toolkit` - Default value is false
 
 ```shell
-dotnet new formsclasslib -n MyApp.UI -it -im
+dotnet new formsclasslib -n MyApp.UI -it -im -imt
 ```
 
 Page:

@@ -35,6 +35,12 @@
             "defaultValue": "false",
             "description": "If true, includes reference to the Xamarin.CommunityToolkit.Markup NuGet package reference."
         },
+        "include-mvvm-toolkit": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "If true, includes reference to the CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) NuGet package reference."
+        },
         "no-solution-file": {
             "type": "parameter",
             "datatype": "bool",
@@ -48,6 +54,10 @@
         "AddMarkupPackage": {
             "type": "computed",
             "value": "(include-markup)"
+        },
+        "AddMvvmToolkitPackage": {
+            "type": "computed",
+            "value": "(include-mvvm-toolkit)"
         },
         "HostIdentifier": {
             "type": "bind",
