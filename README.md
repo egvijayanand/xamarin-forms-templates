@@ -1,6 +1,6 @@
 ### Xamarin.Forms Project and Item Templates for building native apps for iOS, Android, UWP, macOS, Tizen from a single, shared C# codebase.
 
-Join me on [**Developer Thoughts**](https://egvijayanand.in/), an exclusive blog for .NET MAUI and Blazor, for articles on working with them.
+Join me on [**Developer Thoughts**](https://egvijayanand.in/), an exclusive blog for Xamarin.Forms, .NET MAUI, and Blazor with articles on working with it.
 
 #### Available to install from
 
@@ -44,7 +44,7 @@ dotnet new --update-apply
 ```
 Project template for Xamarin.Forms Class Library and is named as `formsclasslib`
 
-And it currently targets Xamarin.Forms 5.0 Service Release 9 (ver. 5.0.0.2337).
+And it currently targets Xamarin.Forms 5.0 Service Release 10 (ver. 5.0.0.2401).
 
 Item templates for `ContentPage`, `ContentView`, `ShellPage`, and `ResourceDictionary` in XAML and named as `forms-page`, `forms-view`, `forms-shell`, and `forms-resdict` respectively.
 

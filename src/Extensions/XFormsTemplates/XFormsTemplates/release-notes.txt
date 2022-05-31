@@ -1,6 +1,6 @@
-What's new in ver. 1.2.0.0:
+What's new in ver. 1.2.1.0:
 
-Added the ability to reference CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) NuGet package while creating the library project.
+Included the IsExternalInit class definition in the library project template to make use of C# 9.0 features such as Records.
 
 This VS extension is loaded with a Project template for creating a Xamarin.Forms Class Library.
 
