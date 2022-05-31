@@ -1,3 +1,3 @@
-What's new in ver. 1.3.0:
+What's new in ver. 1.3.1:
 
-Added the ability to reference CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) NuGet package while creating the library project.
+Included the IsExternalInit class definition to make use of C# 9.0 features such as Records.
