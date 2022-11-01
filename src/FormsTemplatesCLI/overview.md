@@ -27,24 +27,31 @@ Use the below .NET CLI command to create the project, pages, and views out these
 dotnet new formsclasslib -n MyApp.Core
 ```
 
-Class library project templates take the below optional parameters to include the official CommunityToolkit NuGet packages:
+Class library project templates take the below optional parameters to include the officially supported CommunityToolkit and Essentials NuGet packages:
 
 * `-it` | `--include-toolkit` - Default value is false
 * `-im` | `--include-markup` - Default value is false
+* `-ie` | `--include-essentials` - Default value is false
 * `-imt` | `--include-mvvm-toolkit` - Default value is false
 
 ```shell
-dotnet new formsclasslib -n MyApp.UI -it -im -imt
+dotnet new formsclasslib -n MyApp.UI -it -im -imt -ie
 ```
 
 Page:
 ```shell
 dotnet new forms-page -n LoginPage -na MyApp.Views
 ```
+```shell
+dotnet new forms-page-cs -n HomePage -na MyApp.Views
+```
 
 View:
 ```shell
 dotnet new forms-view -n CardView -na MyApp.Views
+```
+```shell
+dotnet new forms-view-cs -n ContactView -na MyApp.Views
 ```
 
 Shell:

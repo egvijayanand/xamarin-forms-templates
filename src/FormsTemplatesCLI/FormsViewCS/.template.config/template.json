@@ -8,19 +8,16 @@
         "UWP",
         "Windows",
         "Xamarin.Forms",
-        "Xaml"
+        "Code"
     ],
-    "identity": "VijayAnand.FormsTemplates.View.Xaml",
-    "description": "An item template for Xamarin.Forms ContentView in XAML",
-    "name": "Xamarin.Forms ContentView",
-    "shortName": "forms-view",
+    "identity": "VijayAnand.FormsTemplates.View.Code",
+    "description": "An item template for Xamarin.Forms ContentView in C#",
+    "name": "Xamarin.Forms ContentView (C#)",
+    "shortName": "forms-view-cs",
     "sourceName": "FormsView",
     "primaryOutputs": [
         {
-            "path": "FormsView.xaml"
-        },
-        {
-            "path": "FormsView.xaml.cs"
+            "path": "FormsView.cs"
         }
     ],
     "tags": {

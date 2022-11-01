@@ -26,7 +26,7 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	</PropertyGroup>
 	<ItemGroup>
-		<Content Include="FormsPage\**\*;FormsView\**\*;FormsShell\**\*;FormsClassLib\**\*;FormsResDict\**\*" Exclude="**\bin\**;**\obj\**"/>
+		<Content Include="FormsPage\**\*;FormsPageCS\**\*;FormsView\**\*;FormsViewCS\**\*;FormsShell\**\*;FormsClassLib\**\*;FormsResDict\**\*" Exclude="**\bin\**;**\obj\**"/>
 		<Compile Remove="**\*"/>
 		<None Include="overview.md" Pack="true" PackagePath="\"/>
 		<None Include="release-notes.txt"/>
