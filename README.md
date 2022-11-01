@@ -46,7 +46,7 @@ Project template for Xamarin.Forms Class Library and is named as `formsclasslib`
 
 And it currently targets Xamarin.Forms 5.0 Service Release 10 (ver. 5.0.0.2401).
 
-Item templates for `ContentPage`, `ContentView`, `ShellPage`, and `ResourceDictionary` in XAML and named as `forms-page`, `forms-view`, `forms-shell`, and `forms-resdict` respectively.
+Item templates for `ContentPage`, `ContentView`, `ShellPage`, and `ResourceDictionary` in XAML and named as `forms-page`, `forms-view`, `forms-shell`, and `forms-resdict` respectively. There's a C# item template for `ContentPage` and `ContentView` and named as `forms-page-cs` and `forms-view-cs` respectively.
 
 Use the below .NET CLI command to create the project, pages, and views out these templates:
 
@@ -54,26 +54,33 @@ Use the below .NET CLI command to create the project, pages, and views out these
 dotnet new formsclasslib -n MyApp.Core
 ```
 
-Class library project templates take the below optional parameters to include the officially supported Xamarin.CommunityToolkit, Xamarin.CommunityToolkit.Markup, CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) or all NuGet packages:
+Class library project templates take the below optional parameters to include the officially supported Xamarin.CommunityToolkit, Xamarin.CommunityToolkit.Markup, Xamarin.Essentials, CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) or all NuGet packages:
 
 * `-it` | `--include-toolkit` - Default value is `false`
 * `-im` | `--include-markup` - Default value is `false`
+* `-ie` | `--include-essentials` - Default value is `false`
 * `-imt` | `--include-mvvm-toolkit` - Default value is `false`
 
-Note: `v2.0.x` is the NuGet package version being added out-of-the-box for Xamarin packages and `v8.0.0-preview3` for MVVM Toolkit package.
+Note: `v2.0.x` is the NuGet package version being added out-of-the-box for Xamarin Toolkit packages, `v1.7.3` for Xamarin.Essentials package and `v8.0.0` for MVVM Toolkit package.
 
 ```shell
-dotnet new formsclasslib -n MyApp.UI -it -im -imt
+dotnet new formsclasslib -n MyApp.UI -it -im -ie -imt
 ```
 
 Page:
 ```shell
 dotnet new forms-page -n LoginPage -na MyApp.Views
 ```
+```shell
+dotnet new forms-page-cs -n HomePage -na MyApp.Views
+```
 
 View:
 ```shell
 dotnet new forms-view -n CardView -na MyApp.Views
+```
+```shell
+dotnet new forms-view-cs -n ContactsView -na MyApp.Views
 ```
 
 Shell:
@@ -97,4 +104,4 @@ Here `-n` denotes the name of the project/page/view that is to be created (for p
 
 *Note: If name parameter is not provided, the .NET CLI template engine will take the current folder name in the context as its name.*
 
-And `-na` denotes the namespace under which the file is to be created (Can also be specified as `--namespace`).
+And `-na` denotes the namespace under which the file is to be created (Can also be specified as `--namespace`). _While working with .NET 7 SDK, the `namespace` parameter in short notation needs to be passed as `-p:na` (i.e., it needs to be prefixed with `-p:`)._
