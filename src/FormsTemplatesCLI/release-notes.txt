@@ -1,3 +1,9 @@
-What's new in ver. 1.3.1:
+What's new in ver. 1.4.0:
+
+Included an option to add reference Xamarin.Essentials NuGet package during Xamarin.Forms class library creation.
+
+Added new item templates for Forms Page and View in C#.
+
+v1.3.1:
 
 Included the IsExternalInit class definition to make use of C# 9.0 features such as Records.
