@@ -11,7 +11,7 @@
         "Library"
     ],
     "identity": "VijayAnand.FormsTemplates.ClassLib",
-    "description": "A project template for Xamarin.Forms 5 Class Library (ver. 5.0.0.2401)",
+    "description": "A project template for Xamarin.Forms 5 Class Library (ver. 5.0.0.2515)",
     "name": "Xamarin.Forms 5 Class Library",
     "shortName": "formsclasslib",
     "sourceName": "FormsClassLib",
@@ -23,29 +23,48 @@
         "104D078F-F441-4A4A-A89B-21C40D7B8C10"
     ],
     "symbols": {
+        "Framework": {
+            "type": "parameter",
+            "datatype": "choice",
+            "description": "Option to choose the class library target framework.",
+            "choices": [
+                {
+                    "choice": "netstandard2.1",
+                    "description": "Target .NET Standard 2.1",
+                    "displayName": ".NET Standard 2.1"
+                },
+                {
+                    "choice": "netstandard2.0",
+                    "description": "Target .NET Standard 2.0",
+                    "displayName": ".NET Standard 2.0"
+                }
+            ],
+            "replaces": "LIB_TFM",
+            "defaultValue": "netstandard2.0"
+        },
         "include-toolkit": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "If true, includes reference to the Xamarin.CommunityToolkit NuGet package reference."
+            "description": "If true, includes reference to the Xamarin.CommunityToolkit NuGet package."
         },
         "include-markup": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "If true, includes reference to the Xamarin.CommunityToolkit.Markup NuGet package reference."
+            "description": "If true, includes reference to the Xamarin.CommunityToolkit.Markup NuGet package."
         },
         "include-essentials": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "If true, includes reference to the Xamarin.Essentials NuGet package reference."
+            "description": "If true, includes reference to the Xamarin.Essentials NuGet package."
         },
         "include-mvvm-toolkit": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "If true, includes reference to the CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) NuGet package reference."
+            "description": "If true, includes reference to the CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) NuGet package."
         },
         "no-solution-file": {
             "type": "parameter",
