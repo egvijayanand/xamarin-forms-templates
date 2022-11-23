@@ -4,9 +4,9 @@ using Xamarin.Forms.Xaml;
 namespace MyApp.Namespace
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FormsShell : Shell
+    public partial class FormsShell__1 : Shell
     {
-        public FormsShell()
+        public FormsShell__1()
         {
             InitializeComponent();
         }

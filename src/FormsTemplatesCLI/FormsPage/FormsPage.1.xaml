@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MyApp.Namespace"
-             x:Class="MyApp.Namespace.FormsView">
-    <ContentView.Content>
+             x:Class="MyApp.Namespace.FormsPage__1">
+    <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!!!"
                    TextColor="Purple"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
         </StackLayout>
-    </ContentView.Content>
-</ContentView>
+    </ContentPage.Content>
+</ContentPage>

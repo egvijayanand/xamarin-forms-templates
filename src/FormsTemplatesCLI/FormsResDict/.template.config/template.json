@@ -15,7 +15,7 @@
     "description": "An item template for Xamarin.Forms ResourceDictionary in XAML",
     "name": "Xamarin.Forms ResourceDictionary",
     "shortName": "forms-resdict",
-    "sourceName": "FormsResDict",
+    "sourceName": "FormsResDict.1",
     "tags": {
         "language": "C#",
         "type": "item"
@@ -44,7 +44,7 @@
                 {
                     "condition": "(XamlOnly)",
                     "exclude": [
-                        "FormsResDict.xaml.cs"
+                        "FormsResDict.1.xaml.cs"
                     ]
                 }
             ]

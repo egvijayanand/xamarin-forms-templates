@@ -10,7 +10,7 @@
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     xmlns:local="clr-namespace:MyApp.Namespace"
-                    x:Class="MyApp.Namespace.FormsResDict">
+                    x:Class="MyApp.Namespace.FormsResDict__1">
     <!-- Define your resources here -->
 </ResourceDictionary>
 <!--#endif-->
