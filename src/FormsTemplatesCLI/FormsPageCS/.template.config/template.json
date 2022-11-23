@@ -15,10 +15,10 @@
     "description": "An item template for Xamarin.Forms ContentPage in C#",
     "name": "Xamarin.Forms ContentPage (C#)",
     "shortName": "forms-page-cs",
-    "sourceName": "FormsPage",
+    "sourceName": "FormsPage.1",
     "primaryOutputs": [
         {
-            "path": "FormsPage.cs"
+            "path": "FormsPage.1.cs"
         }
     ],
     "tags": {

@@ -1,4 +1,8 @@
-What's new in ver. 1.4.1:
+What's new in ver. 1.4.2:
+
+Little housekeeping to improve the reliability of the templates.
+
+v1.4.1
 
 Xamarin.Forms version bumped to 5.0.0.2515 (SR12).
 

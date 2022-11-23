@@ -14,10 +14,10 @@
     "description": "An item template for Xamarin.Forms ContentView in C#",
     "name": "Xamarin.Forms ContentView (C#)",
     "shortName": "forms-view-cs",
-    "sourceName": "FormsView",
+    "sourceName": "FormsView.1",
     "primaryOutputs": [
         {
-            "path": "FormsView.cs"
+            "path": "FormsView.1.cs"
         }
     ],
     "tags": {

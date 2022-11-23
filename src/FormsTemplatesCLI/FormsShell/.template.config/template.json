@@ -15,13 +15,13 @@
     "description": "An item template for Xamarin.Forms ShellPage in XAML",
     "name": "Xamarin.Forms ShellPage",
     "shortName": "forms-shell",
-    "sourceName": "FormsShell",
+    "sourceName": "FormsShell.1",
     "primaryOutputs": [
         {
-            "path": "FormsShell.xaml"
+            "path": "FormsShell.1.xaml"
         },
         {
-            "path": "FormsShell.xaml.cs"
+            "path": "FormsShell.1.xaml.cs"
         }
     ],
     "tags": {
