@@ -31,30 +31,35 @@ Item Templates:
 To install the template NuGet package, use the below .NET CLI command:
 
 ```shell
-dotnet new --install VijayAnand.FormsTemplates
+dotnet new install VijayAnand.FormsTemplates
 ```
 
 If you've already installed this package, then it can be updated to the latest version with the below command:
 
 ```shell
-dotnet new --update-check
+dotnet new update --check-only
 ```
 ```shell
-dotnet new --update-apply
+dotnet new update
 ```
 Project template for Xamarin.Forms Class Library and is named as `formsclasslib`
 
-And it currently targets Xamarin.Forms 5.0 Service Release 10 (ver. 5.0.0.2401).
+And it currently targets Xamarin.Forms 5.0 Service Release 12 (ver. 5.0.0.2515).
 
 Item templates for `ContentPage`, `ContentView`, `ShellPage`, and `ResourceDictionary` in XAML and named as `forms-page`, `forms-view`, `forms-shell`, and `forms-resdict` respectively. There's a C# item template for `ContentPage` and `ContentView` and named as `forms-page-cs` and `forms-view-cs` respectively.
 
 Use the below .NET CLI command to create the project, pages, and views out these templates:
 
+An optional parameter has been introduced to choose the library target framework (.NET Standard 2.0 / 2.1):
+
+* `-f` | `--framework` - Default value is `netstandard2.0`
+
+Library target framework override:
 ```shell
-dotnet new formsclasslib -n MyApp.Core
+dotnet new formsclasslib -n MyApp.Core -f netstandard2.1
 ```
 
-Class library project templates take the below optional parameters to include the officially supported Xamarin.CommunityToolkit, Xamarin.CommunityToolkit.Markup, Xamarin.Essentials, CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) or all NuGet packages:
+Class library project templates take the below optional parameters to include the officially supported `Xamarin.CommunityToolkit`, `Xamarin.CommunityToolkit.Markup`, `Xamarin.Essentials`, `CommunityToolkit.Mvvm` (aka Microsoft MVVM Toolkit) or all NuGet packages:
 
 * `-it` | `--include-toolkit` - Default value is `false`
 * `-im` | `--include-markup` - Default value is `false`
