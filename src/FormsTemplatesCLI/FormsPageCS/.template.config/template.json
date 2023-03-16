@@ -8,6 +8,7 @@
         "UWP",
         "Windows",
         "Xamarin.Forms",
+        "Page",
         "Code"
     ],
     "identity": "VijayAnand.FormsPageCS",

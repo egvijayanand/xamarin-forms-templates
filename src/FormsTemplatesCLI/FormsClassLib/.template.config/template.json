@@ -11,7 +11,8 @@
         "Library"
     ],
     "identity": "VijayAnand.FormsTemplates.ClassLib",
-    "description": "A project template for Xamarin.Forms 5 Class Library (ver. 5.0.0.2515)",
+    "groupIdentity": "VijayAnand.FormsTemplates.Library",
+    "description": "A project template for Xamarin.Forms 5 Class Library",
     "name": "Xamarin.Forms 5 Class Library",
     "shortName": "formsclasslib",
     "sourceName": "FormsClassLib.1",
