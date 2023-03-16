@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MyApp.Namespace"
-             x:Class="MyApp.Namespace.FormsPage__1">
+<!--#if (XamlOnly)-->
+<?xaml-comp compile="true" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:MyApp.Namespace"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+<!--#else-->
+<ContentPage
+    x:Class="MyApp.Namespace.FormsPage__1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:MyApp.Namespace"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+<!--#endif-->
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!!!"
-                   TextColor="Purple"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
+            <Label
+                HorizontalOptions="Center"
+                Text="Welcome to Xamarin.Forms!!!"
+                TextColor="Purple"
+                VerticalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

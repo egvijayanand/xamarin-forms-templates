@@ -1,25 +1,25 @@
 {
     "$schema": "https://json.schemastore.org/template",
     "author": "Vijay Anand E G",
-    "defaultName": "FormsView1",
+    "defaultName": "AppShell",
     "classifications": [
         "Android",
         "iOS",
         "UWP",
         "Windows",
         "Xamarin.Forms",
-        "View",
+        "Shell",
         "Code"
     ],
-    "identity": "VijayAnand.FormsViewCS",
-    "groupIdentity": "VijayAnand.FormsTemplates.View.Code",
-    "description": "An item template for Xamarin.Forms ContentView in C#",
-    "name": "Xamarin.Forms ContentView (C#)",
-    "shortName": "forms-view-cs",
-    "sourceName": "FormsView.1",
+    "identity": "VijayAnand.FormsShellCS",
+    "groupIdentity": "VijayAnand.FormsTemplates.Shell.Code",
+    "description": "An item template for Xamarin.Forms ShellPage in C#",
+    "name": "Xamarin.Forms ShellPage (C#)",
+    "shortName": "forms-shell-cs",
+    "sourceName": "FormsShell.1",
     "primaryOutputs": [
         {
-            "path": "FormsView.1.cs"
+            "path": "FormsShell.1.cs"
         }
     ],
     "tags": {

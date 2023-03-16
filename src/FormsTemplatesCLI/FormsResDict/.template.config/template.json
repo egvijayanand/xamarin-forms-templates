@@ -16,6 +16,15 @@
     "name": "Xamarin.Forms ResourceDictionary",
     "shortName": "forms-resdict",
     "sourceName": "FormsResDict.1",
+    "primaryOutputs": [
+        {
+            "path": "FormsResDict.1.xaml"
+        },
+        {
+            "path": "FormsResDict.1.xaml.cs",
+            "condition": "(!XamlOnly)"
+        }
+    ],
     "tags": {
         "language": "C#",
         "type": "item"

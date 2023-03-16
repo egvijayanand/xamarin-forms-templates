@@ -6,7 +6,7 @@ Join me on [**Developer Thoughts**](https://egvijayanand.in/), an exclusive blog
 
 |NuGet|VS Marketplace|
 |:---:|:---:|
-|[![VijayAnand.FormsTemplates - NuGet Package](https://badgen.net/nuget/v/VijayAnand.FormsTemplates/)](https://www.nuget.org/packages/VijayAnand.FormsTemplates/)|[![Xamarin.Forms Project and Item Templates - VS Marketplace](https://badgen.net/vs-marketplace/v/egvijayanand.xamarin-forms-templates)](https://marketplace.visualstudio.com/items?itemName=egvijayanand.xamarin-forms-templates)|
+|[![VijayAnand.FormsTemplates - NuGet Package](https://badgen.net/nuget/v/VijayAnand.FormsTemplates/?icon=nuget)](https://www.nuget.org/packages/VijayAnand.FormsTemplates/)|[![Xamarin.Forms Project and Item Templates - VS Marketplace](https://badgen.net/vs-marketplace/v/egvijayanand.xamarin-forms-templates?icon=visualstudio)](https://marketplace.visualstudio.com/items?itemName=egvijayanand.xamarin-forms-templates)|
 
 #### Access within Visual Studio IDE
 
@@ -42,32 +42,50 @@ dotnet new update --check-only
 ```shell
 dotnet new update
 ```
+
+#### Templates Included
+
 Project template for Xamarin.Forms Class Library and is named as `formsclasslib`
 
-And it currently targets Xamarin.Forms 5.0 Service Release 12 (ver. 5.0.0.2515).
-
-Item templates for `ContentPage`, `ContentView`, `ShellPage`, and `ResourceDictionary` in XAML and named as `forms-page`, `forms-view`, `forms-shell`, and `forms-resdict` respectively. There's a C# item template for `ContentPage` and `ContentView` and named as `forms-page-cs` and `forms-view-cs` respectively.
-
-Use the below .NET CLI command to create the project, pages, and views out these templates:
-
-An optional parameter has been introduced to choose the library target framework (.NET Standard 2.0 / 2.1):
+Class library project template take the below optional parameters to override its target framework and to include the officially supported [Xamarin.CommunityToolkit](https://www.nuget.org/packages/Xamarin.CommunityToolkit), [Xamarin.CommunityToolkit.Markup](https://www.nuget.org/packages/Xamarin.CommunityToolkit.Markup), [Xamarin.Essentials](https://www.nuget.org/packages/Xamarin.Essentials), [CommunityToolkit.Mvvm](https://www.nuget.org/packages/CommunityToolkit.Mvvm) (aka Microsoft MVVM Toolkit) or all NuGet packages:
 
 * `-f` | `--framework` - Default value is `netstandard2.0`
-
-Library target framework override:
-```shell
-dotnet new formsclasslib -n MyApp.Core -f netstandard2.1
-```
-
-Class library project templates take the below optional parameters to include the officially supported `Xamarin.CommunityToolkit`, `Xamarin.CommunityToolkit.Markup`, `Xamarin.Essentials`, `CommunityToolkit.Mvvm` (aka Microsoft MVVM Toolkit) or all NuGet packages:
-
 * `-it` | `--include-toolkit` - Default value is `false`
 * `-im` | `--include-markup` - Default value is `false`
 * `-ie` | `--include-essentials` - Default value is `false`
 * `-imt` | `--include-mvvm-toolkit` - Default value is `false`
 
-Note: `v2.0.x` is the NuGet package version being added out-of-the-box for Xamarin Toolkit packages, `v1.7.3` for Xamarin.Essentials package and `v8.0.0` for MVVM Toolkit package.
+*Note: The NuGet package version being added out-of-the-box are v2.0.x for the Xamarin Toolkit packages, v1.7.x for the Xamarin.Essentials package, and v8.1.0 for the MVVM Toolkit package.*
 
+|Item|Template Name|
+|:---:|:---:|
+|ContentPage (XAML)|forms-page|
+|ContentPage (C#)|forms-page-cs|
+|ContentView (XAML)|forms-view|
+|ContentView (C#)|forms-view-cs|
+|ResourceDictionary (XAML)|forms-resdict|
+|ShellPage (XAML)|forms-shell|
+|ShellPage (C#)|forms-shell-cs|
+
+Use the below .NET CLI command to create the project, pages, and views out these templates:
+
+Here, `-n` denotes the name of the project/page/view that is to be created (for pages/views, don't need to suffix it with `.xaml` / `.cs`, it will be added automatically) (Can also be specified as `--name` in the expanded form).
+
+*Note: If name parameter is not provided, the .NET CLI template engine will take the current folder name in the context as its name.*
+
+And `-na` denotes the namespace under which the file is to be created (Can also be specified as `--namespace` in the expanded form).
+
+*While working with .NET 7 or higher SDK, the namespace parameter in short notation needs to be passed as `-p:na` (i.e., it needs to be prefixed with `-p:`).*
+
+Class Library:
+```shell
+dotnet new formsclasslib -n MyApp.Core
+```
+Library target framework override:
+```shell
+dotnet new formsclasslib -n MyApp.Core -f netstandard2.1
+```
+Option to include NuGet packages:
 ```shell
 dotnet new formsclasslib -n MyApp.UI -it -im -ie -imt
 ```
@@ -92,21 +110,17 @@ Shell:
 ```shell
 dotnet new forms-shell -n AppShell -na MyApp
 ```
+```shell
+dotnet new forms-shell-cs -n MobileShell -na MyApp
+```
 
 Resource Dictionary:
 
 With C# code-behind file:
 ```shell
-dotnet new forms-resdict -n DarkTheme -na MyApp.Themes
+dotnet new forms-resdict -n DefaultTheme -na MyApp.Themes
 ```
-
-Without C# code-behind file - Xaml Only (Option can be `-xo` or `--xaml-only`):
+Without C# code-behind file - Xaml only (Option can be specified as `-xo` or `--xaml-only`):
 ```shell
 dotnet new forms-resdict -n DarkTheme -na MyApp.Themes -xo
 ```
-
-Here `-n` denotes the name of the project/page/view that is to be created (for pages/views, don't need to suffix it with .xaml, it will be added automatically) (Can also be specified as `--name`). 
-
-*Note: If name parameter is not provided, the .NET CLI template engine will take the current folder name in the context as its name.*
-
-And `-na` denotes the namespace under which the file is to be created (Can also be specified as `--namespace`). _While working with .NET 7 SDK, the `namespace` parameter in short notation needs to be passed as `-p:na` (i.e., it needs to be prefixed with `-p:`)._

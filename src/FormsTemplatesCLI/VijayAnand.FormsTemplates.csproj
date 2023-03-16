@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
@@ -6,7 +7,7 @@
 		<PackageVersion>1.0.0</PackageVersion>
 		<Title>Xamarin.Forms Templates</Title>
 		<Authors>Vijay Anand E G</Authors>
-		<Copyright>Copyright &#169; 2022 Vijay Anand E G</Copyright>
+		<Copyright>Copyright &#169; 2022-2023 Vijay Anand E G</Copyright>
 		<Description>Project and Item templates for developing Xamarin.Forms App that runs on iOS, Android, and Windows.</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<IncludeContentInPack>true</IncludeContentInPack>
@@ -26,7 +27,7 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	</PropertyGroup>
 	<ItemGroup>
-		<Content Include="FormsPage\**\*;FormsPageCS\**\*;FormsView\**\*;FormsViewCS\**\*;FormsShell\**\*;FormsClassLib\**\*;FormsResDict\**\*" Exclude="**\bin\**;**\obj\**"/>
+		<Content Include="FormsPage\**\*;FormsPageCS\**\*;FormsView\**\*;FormsViewCS\**\*;FormsShell\**\*;FormsShellCS\**\*;FormsClassLib\**\*;FormsResDict\**\*" Exclude="**\bin\**;**\obj\**"/>
 		<Compile Remove="**\*"/>
 		<None Include="overview.md" Pack="true" PackagePath="\"/>
 		<None Include="release-notes.txt"/>

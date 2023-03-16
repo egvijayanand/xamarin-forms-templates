@@ -13,6 +13,7 @@ namespace MyApp.Namespace
                     new Label()
                     {
                         Text = "Hello from Xamarin.Forms!!!",
+                        TextColor = Color.Purple,
                         HorizontalOptions = LayoutOptions.CenterAndExpand,
                         VerticalOptions = LayoutOptions.CenterAndExpand
                     }
