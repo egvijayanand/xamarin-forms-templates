@@ -1,0 +1,15 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+	<TemplateData>
+		<DefaultName>AppShell.cs</DefaultName>
+		<Name>Shell Page (C#)</Name>
+		<Description>A page for defining app visual hierarchy and navigation using C#.</Description>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>Forms</ProjectSubType>
+		<SortOrder>200</SortOrder>
+		<Icon>__TemplateIcon.ico</Icon>
+	</TemplateData>
+	<TemplateContent>
+		<References/>
+		<ProjectItem TargetFileName="$fileinputname$.cs" ReplaceParameters="true">FormsShellCS.cs</ProjectItem>
+	</TemplateContent>
+</VSTemplate>

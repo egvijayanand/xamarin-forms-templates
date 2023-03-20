@@ -1,4 +1,15 @@
-What's new in ver. 1.4.2.0:
+What's new in ver. 1.4.3.0:
+---------------------------
+1. An item template for defining the Shell Page in C#.
+
+2. Dependent NuGet package versions have been made dynamic to pull the latest stable version.
+
+Xamarin.Forms - 5.0.0.x
+Xamarin.Essentials - 1.7.x
+Xamarin.CommunityToolkit - 2.0.x
+Xamarin.CommunityToolkit.Markup - 2.0.x
+
+v1.4.2.0:
 
 A little housekeeping to improve the reliability of the templates.
 
