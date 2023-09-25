@@ -1,5 +1,9 @@
-What's new in ver. 1.4.3.0:
+What's new in ver. 1.4.4.0:
 ---------------------------
+1. Package versions bumped to pull the latest stable version.
+
+v1.4.3.0:
+
 1. An item template for defining the Shell Page in C#.
 
 2. Dependent NuGet package versions have been made dynamic to pull the latest stable version.

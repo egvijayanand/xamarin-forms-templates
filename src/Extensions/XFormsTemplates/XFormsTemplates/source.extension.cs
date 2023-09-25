@@ -11,7 +11,7 @@ namespace VijayAnand.XFormsTemplates
         public const string Name = "Xamarin.Forms Project and Item Templates";
         public const string Description = @"Xamarin.Forms Project and Item Templates for building native apps for iOS, Android, UWP, macOS, Tizen from a single, shared C# codebase.";
         public const string Language = "en-US";
-        public const string Version = "1.4.3.0";
+        public const string Version = "1.4.4.0";
         public const string Author = "Vijay Anand E G";
         public const string Tags = "Xamarin.Forms, Mobile, iOS, Android, UWP, Desktop, Windows, Templates, Shell, Library, Visual Studio, Resource Dictionary, Xamarin, macOS, Tizen";
     }
