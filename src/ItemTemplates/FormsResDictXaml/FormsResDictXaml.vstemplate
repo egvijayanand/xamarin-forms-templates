@@ -10,6 +10,6 @@
 	</TemplateData>
 	<TemplateContent>
 		<References/>
-		<ProjectItem TargetFileName="$fileinputname$.xaml" ReplaceParameters="true">FormsResDictXaml.xaml</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.xaml" ReplaceParameters="true">FormsResDict.xaml</ProjectItem>
 	</TemplateContent>
 </VSTemplate>
