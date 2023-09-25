@@ -1,5 +1,11 @@
-What's new in ver. 1.4.3:
+Join me on Developer Thoughts (https://egvijayanand.in/), an exclusive blog for articles on Xamarin.Forms, .NET MAUI and Blazor.
+
+What's new in ver. 1.4.4:
 -------------------------
+Package versions bumped to pull the latest stable version.
+
+v1.4.3:
+
 1. Package versions have been made dynamic to pull the latest stable version.
 
 2. Added a new item template for Shell definition in C#
