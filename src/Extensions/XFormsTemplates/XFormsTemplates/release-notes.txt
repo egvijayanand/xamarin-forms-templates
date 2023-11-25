@@ -1,5 +1,11 @@
-What's new in ver. 1.4.4.0:
+What's new in ver. 1.5.0.0:
 ---------------------------
+1. Introduced an option to add references to all supported NuGet packages as a unified option
+
+2. Option to add reference to the Shared Toolkit NuGet package
+
+v1.4.4.0:
+
 1. Package versions bumped to pull the latest stable version.
 
 v1.4.3.0:
