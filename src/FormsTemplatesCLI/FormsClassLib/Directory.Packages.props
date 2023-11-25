@@ -1,0 +1,23 @@
+<Project>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageVersion Include="Xamarin.Forms" Version="5.0.0.2622" />
+        <!--#if (AddEssentialsPackage)-->
+        <PackageVersion Include="Xamarin.Essentials" Version="1.8.0" />
+        <!--#endif-->
+        <!--#if (AddToolkitPackage)-->
+        <PackageVersion Include="Xamarin.CommunityToolkit" Version="2.0.6" />
+        <!--#endif-->
+        <!--#if (AddMarkupPackage)-->
+        <PackageVersion Include="Xamarin.CommunityToolkit.Markup" Version="2.0.6" />
+        <!--#endif-->
+        <!--#if (AddMvvmToolkitPackage)-->
+        <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+        <!--#endif-->
+        <!--#if (AddSharedToolkitPackage)-->
+        <PackageVersion Include="VijayAnand.Toolkit.Markup" Version="3.0.0" />
+        <!--#endif-->
+    </ItemGroup>
+</Project>

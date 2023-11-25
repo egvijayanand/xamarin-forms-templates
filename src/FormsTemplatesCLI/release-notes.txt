@@ -1,7 +1,29 @@
 Join me on Developer Thoughts (https://egvijayanand.in/), an exclusive blog for articles on Xamarin.Forms, .NET MAUI and Blazor.
 
-What's new in ver. 1.4.4:
+What's new in ver. 1.5.0:
 -------------------------
+1. Introduced an option to add a reference to all supported NuGet packages by specifying a single parameter
+
+-asp | --all-supported-packages -> The default value is false.
+
+dotnet new formsclasslib -o FormsLib -asp
+
+2. Option to reference the Shared Toolkit NuGet package
+
+-ist | --include-shared-toolkit -> The default value is false.
+
+dotnet new formsclasslib -o FormsLib -ist
+
+3. Introduced an option to support the NuGet Central Package Management (CPM) feature
+
+-cpm | --central-pkg-mgmt -> The default value is false.
+
+dotnet new formsclasslib -o FormsLib -cpm
+
+Note: For now, the CPM feature is only supported on CLI.
+
+v1.4.4:
+
 Package versions bumped to pull the latest stable version.
 
 v1.4.3:

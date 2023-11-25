@@ -9,18 +9,40 @@
         <RootNamespace>FormsClassLib._1</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.*"/>
+        <!--#if (CentralPkgMgmt)-->
+        <PackageReference Include="Xamarin.Forms" />
         <!--#if (AddToolkitPackage)-->
-        <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.*" />
+        <PackageReference Include="Xamarin.CommunityToolkit" />
         <!--#endif-->
         <!--#if (AddMarkupPackage)-->
-        <PackageReference Include="Xamarin.CommunityToolkit.Markup" Version="2.0.*" />
+        <PackageReference Include="Xamarin.CommunityToolkit.Markup" />
         <!--#endif-->
         <!--#if (AddEssentialsPackage)-->
-        <PackageReference Include="Xamarin.Essentials" Version="1.8.*" />
+        <PackageReference Include="Xamarin.Essentials" />
         <!--#endif-->
         <!--#if (AddMvvmToolkitPackage)-->
-        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.*" />
+        <PackageReference Include="CommunityToolkit.Mvvm" />
+        <!--#endif-->
+        <!--#if (AddSharedToolkitPackage)-->
+        <PackageReference Include="VijayAnand.Toolkit.Markup" />
+        <!--#endif-->
+        <!--#else-->
+        <PackageReference Include="Xamarin.Forms" Version="5.*" />
+        <!--#if (AddToolkitPackage)-->
+        <PackageReference Include="Xamarin.CommunityToolkit" Version="2.*" />
+        <!--#endif-->
+        <!--#if (AddMarkupPackage)-->
+        <PackageReference Include="Xamarin.CommunityToolkit.Markup" Version="2.*" />
+        <!--#endif-->
+        <!--#if (AddEssentialsPackage)-->
+        <PackageReference Include="Xamarin.Essentials" Version="1.*" />
+        <!--#endif-->
+        <!--#if (AddMvvmToolkitPackage)-->
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
+        <!--#endif-->
+        <!--#if (AddSharedToolkitPackage)-->
+        <PackageReference Include="VijayAnand.Toolkit.Markup" Version="3.*" />
+        <!--#endif-->
         <!--#endif-->
     </ItemGroup>
 </Project>
