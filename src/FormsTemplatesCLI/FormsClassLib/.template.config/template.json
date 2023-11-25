@@ -21,7 +21,8 @@
         "type": "project"
     },
     "guids": [
-        "104D078F-F441-4A4A-A89B-21C40D7B8C10"
+        "104D078F-F441-4A4A-A89B-21C40D7B8C10",
+        "1D17E9ED-22F1-4992-AE45-B8507EFD6950"
     ],
     "symbols": {
         "Framework": {
@@ -42,6 +43,13 @@
             ],
             "replaces": "LIB_TFM",
             "defaultValue": "netstandard2.0"
+        },
+        "all-supported-packages": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "Option to add all supported NuGet package reference.",
+            "displayName": "_Add all supported NuGet package reference"
         },
         "include-toolkit": {
             "type": "parameter",
@@ -67,6 +75,20 @@
             "defaultValue": "false",
             "description": "If true, includes reference to the CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) NuGet package."
         },
+        "include-shared-toolkit": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "Option to add VijayAnand.Toolkit.Markup NuGet package reference.",
+            "displayName": "Add VijayAnand.Toolkit.Markup NuGet package reference"
+        },
+        "central-pkg-mgmt": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "Option to configure NuGet Central Package Management (CPM).",
+            "displayName": "Option to configure NuGet Central Package Management (CPM)"
+        },
         "no-solution-file": {
             "type": "parameter",
             "datatype": "bool",
@@ -75,19 +97,27 @@
         },
         "AddToolkitPackage": {
             "type": "computed",
-            "value": "(include-toolkit)"
+            "value": "(include-toolkit || all-supported-packages)"
         },
         "AddMarkupPackage": {
             "type": "computed",
-            "value": "(include-markup)"
+            "value": "(include-markup || all-supported-packages)"
         },
         "AddEssentialsPackage": {
             "type": "computed",
-            "value": "(include-essentials)"
+            "value": "(include-essentials || all-supported-packages)"
         },
         "AddMvvmToolkitPackage": {
             "type": "computed",
-            "value": "(include-mvvm-toolkit)"
+            "value": "(include-mvvm-toolkit || all-supported-packages)"
+        },
+        "AddSharedToolkitPackage": {
+            "type": "computed",
+            "value": "(include-shared-toolkit || all-supported-packages)"
+        },
+        "CentralPkgMgmt": {
+            "type": "computed",
+            "value": "(central-pkg-mgmt)"
         },
         "HostIdentifier": {
             "type": "bind",
@@ -106,6 +136,12 @@
                     "condition": "(no-solution-file || !(HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
                     "exclude": [
                         "FormsClassLib.1.sln"
+                    ]
+                },
+                {
+                    "condition": "(!CentralPkgMgmt || !(HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+                    "exclude": [
+                        "Directory.Packages.props"
                     ]
                 }
             ]

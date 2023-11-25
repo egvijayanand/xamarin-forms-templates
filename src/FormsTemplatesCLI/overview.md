@@ -2,15 +2,17 @@
 
 Project template for Xamarin.Forms Class Library and is named as `formsclasslib`
 
-Class library project template take the below optional parameters to override its target framework and to include the officially supported `Xamarin.CommunityToolkit`, `Xamarin.CommunityToolkit.Markup`, `Xamarin.Essentials`, `CommunityToolkit.Mvvm` (aka Microsoft MVVM Toolkit) or all NuGet packages:
+Class library project template take the below optional parameters to override its target framework and to include the officially supported `Xamarin.CommunityToolkit`, `Xamarin.CommunityToolkit.Markup`, `Xamarin.Essentials`, `CommunityToolkit.Mvvm` (aka Microsoft MVVM Toolkit), `VijayAnand.Toolkit.Markup` (the Shared Toolkit) or all NuGet packages:
 
 * `-f` | `--framework` - Default value is `netstandard2.0`
+* `-asp` | `--all-supported-packages` - Default value is `false`
 * `-it` | `--include-toolkit` - Default value is `false`
 * `-im` | `--include-markup` - Default value is `false`
 * `-ie` | `--include-essentials` - Default value is `false`
 * `-imt` | `--include-mvvm-toolkit` - Default value is `false`
+* `-ist` | `--include-shared-toolkit` - Default value is `false`
 
-*Note: The NuGet package version being added out-of-the-box are v2.0.x for the Xamarin Toolkit packages, v1.7.x for the Xamarin.Essentials package, and v8.1.0 for the MVVM Toolkit package.*
+*Note: The NuGet package version being added out-of-the-box are v2.0.x for the Xamarin Toolkit packages, v1.8.x for the Xamarin.Essentials package, and v8.2.x for the MVVM Toolkit package.*
 
 |Item|Template Name|
 |:---:|:---:|
@@ -56,7 +58,18 @@ dotnet new formsclasslib -n MyApp.Core -f netstandard2.1
 ```
 Option to include NuGet packages:
 ```shell
-dotnet new formsclasslib -n MyApp.UI -it -im -imt -ie
+dotnet new formsclasslib -n MyApp.UI -it -im -imt -ie -ist
+```
+In a single parameter:
+```shell
+dotnet new formsclasslib -n MyApp.UI -asp
+```
+NuGet Central Package Management (CPM) feature:
+
+_For now, this is supported only on CLI. Can be used in combination with other parameters too._
+
+```shell
+dotnet new formsclasslib -n MyApp.UI -cpm
 ```
 
 Page:
