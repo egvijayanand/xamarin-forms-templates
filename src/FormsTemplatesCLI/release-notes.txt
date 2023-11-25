@@ -8,13 +8,13 @@ What's new in ver. 1.5.0:
 
 dotnet new formsclasslib -o FormsLib -asp
 
-2. Option to reference Shared Toolkit NuGet package
+2. Option to reference the Shared Toolkit NuGet package
 
 -ist | --include-shared-toolkit -> The default value is false.
 
 dotnet new formsclasslib -o FormsLib -ist
 
-3. Introduced an option to support NuGet Central Package Management feature
+3. Introduced an option to support the NuGet Central Package Management (CPM) feature
 
 -cpm | --central-pkg-mgmt -> The default value is false.
 
