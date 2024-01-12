@@ -2,9 +2,9 @@ Join me on Developer Thoughts (https://egvijayanand.in/), an exclusive blog for 
 
 What's new in ver. 1.6.0:
 -------------------------
-1. Introduced an option to add a reference to Xamarin.Essentials.Interfaces NuGet package, an explicit option.
+1. Introduced an option to add a reference to Xamarin.Essentials.Interfaces NuGet package, an explicit option
 
-2. Auto inclusion of the the Type of the Item template that is created for Page, Shell, and Views.
+2. Auto inclusion of the Type of the Item template that is created for Page, Shell, and Views
 
 Just mention only the name of the item that is to be created. Item Type and File Extension would be automatically added.
 
