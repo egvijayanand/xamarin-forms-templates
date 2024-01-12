@@ -35,6 +35,14 @@
             "defaultValue": "false"
         },
         {
+            "id": "include-essentials-interfaces",
+            "name": {
+                "text": "Add Xamarin.Essentials._Interfaces NuGet package reference"
+            },
+            "isVisible": true,
+            "defaultValue": "false"
+        },
+        {
             "id": "include-mvvm-toolkit",
             "name": {
                 "text": "Add CommunityToolkit.Mvvm (aka Microsoft MV_VM Toolkit) NuGet package reference"

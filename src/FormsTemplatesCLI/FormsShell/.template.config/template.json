@@ -22,7 +22,7 @@
             "path": "FormsShell.1.xaml"
         },
         {
-            "path": "FormsShell.1.xaml.cs",
+            "path": "FormsShell.1Shell.xaml.cs",
             "condition": "(!XamlOnly)"
         }
     ],
@@ -54,7 +54,7 @@
                 {
                     "condition": "(XamlOnly)",
                     "exclude": [
-                        "FormsShell.1.xaml.cs"
+                        "FormsShell.1Shell.xaml.cs"
                     ]
                 }
             ]
