@@ -1,5 +1,9 @@
-What's new in ver. 1.5.0.0:
+What's new in ver. 1.6.0.0:
 ---------------------------
+1. Introduced an option to add a reference to Xamarin.Essentials.Interfaces NuGet package, an explicit option.
+
+v1.5.0.0:
+
 1. Introduced an option to add references to all supported NuGet packages as a unified option
 
 2. Option to add reference to the Shared Toolkit NuGet package
