@@ -1,7 +1,23 @@
 Join me on Developer Thoughts (https://egvijayanand.in/), an exclusive blog for articles on Xamarin.Forms, .NET MAUI and Blazor.
 
-What's new in ver. 1.5.0:
+What's new in ver. 1.6.0:
 -------------------------
+1. Introduced an option to add a reference to Xamarin.Essentials.Interfaces NuGet package, an explicit option.
+
+2. Auto inclusion of the the Type of the Item template that is created for Page, Shell, and Views.
+
+Just mention only the name of the item that is to be created. Item Type and File Extension would be automatically added.
+
+dotnet new forms-page -n Home -p:na MyApp.Views
+
+dotnet new forms-page-cs -n Settings -p:na MyApp.Views
+
+dotnet new forms-view -n Card -p:na MyApp.Views
+
+dotnet new forms-view-cs -n Order -p:na MyApp.Views
+
+v1.5.0:
+
 1. Introduced an option to add a reference to all supported NuGet packages by specifying a single parameter
 
 -asp | --all-supported-packages -> The default value is false.

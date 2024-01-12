@@ -45,7 +45,7 @@ dotnet new update
 
 #### Templates Included
 
-Project template for Xamarin.Forms Class Library and is named as `formsclasslib`
+Project template for Xamarin.Forms 5 Class Library and is named as `formsclasslib`
 
 Class library project template take the below optional parameters to override its target framework and to include the officially supported [Xamarin.CommunityToolkit](https://www.nuget.org/packages/Xamarin.CommunityToolkit), [Xamarin.CommunityToolkit.Markup](https://www.nuget.org/packages/Xamarin.CommunityToolkit.Markup), [Xamarin.Essentials](https://www.nuget.org/packages/Xamarin.Essentials), [CommunityToolkit.Mvvm](https://www.nuget.org/packages/CommunityToolkit.Mvvm) (aka Microsoft MVVM Toolkit), [VijayAnand.Toolkit.Markup](https://www.nuget.org/packages/VijayAnand.Toolkit.Markup) (the Shared Toolkit) or all NuGet packages:
 
@@ -56,6 +56,10 @@ Class library project template take the below optional parameters to override it
 * `-ie` | `--include-essentials` - Default value is `false`
 * `-imt` | `--include-mvvm-toolkit` - Default value is `false`
 * `-ist` | `--include-shared-toolkit` - Default value is `false`
+
+Explicit option:
+
+* `-iei` | `--include-essentials-interfaces` - Default value is `false`
 
 *Note: The NuGet package version being added out-of-the-box are v2.0.x for the Xamarin Toolkit packages, v1.8.x for the Xamarin.Essentials package, and v8.2.x for the MVVM Toolkit package.*
 
@@ -71,7 +75,41 @@ Class library project template take the below optional parameters to override it
 
 Use the below .NET CLI command to create the project, pages, and views out these templates:
 
-Here, `-n` denotes the name of the project/page/view that is to be created (for pages/views, don't need to suffix it with `.xaml` / `.cs`, it will be added automatically) (Can also be specified as `--name` in the expanded form).
+Class Library:
+
+```shell
+dotnet new formsclasslib -o MyApp.Core
+```
+
+Library target framework override:
+
+```shell
+dotnet new formsclasslib -o MyApp.Core -f netstandard2.1
+```
+
+Option to include NuGet packages:
+
+```shell
+dotnet new formsclasslib -o MyApp.UI -it -im -ie -iei -imt -ist
+```
+
+In a single parameter (Essentials Interfaces is an exception, to be explicitly mentioned):
+
+```shell
+dotnet new formsclasslib -o MyApp.UI -asp -iei
+```
+
+NuGet Central Package Management (CPM) feature:
+
+_For now, this is supported only on CLI. Can be used in combination with other parameters too._
+
+```shell
+dotnet new formsclasslib -o MyApp.UI -cpm
+```
+
+Here, `-n` denotes the name of the Page/View that is to be created (for Pages/Shell/Views, don't need to suffix the type like `HomePage`, `OrderView`, `AppShell` and file extension `.xaml` / `.cs`, it will be added automatically) (Can also be specified as `--name` in the expanded form).
+
+*Just mention only the name of the item that is to be created. Item Type and File Extension would be automatically added.*
 
 *Note: If name parameter is not provided, the .NET CLI template engine will take the current folder name in the context as its name.*
 
@@ -79,61 +117,43 @@ And `-na` denotes the namespace under which the file is to be created (Can also 
 
 *While working with .NET 7 or higher SDK, the namespace parameter in short notation needs to be passed as `-p:na` (i.e., it needs to be prefixed with `-p:`).*
 
-Class Library:
-```shell
-dotnet new formsclasslib -n MyApp.Core
-```
-Library target framework override:
-```shell
-dotnet new formsclasslib -n MyApp.Core -f netstandard2.1
-```
-Option to include NuGet packages:
-```shell
-dotnet new formsclasslib -n MyApp.UI -it -im -ie -imt -ist
-```
-In a single parameter:
-```shell
-dotnet new formsclasslib -n MyApp.UI -asp
-```
-NuGet Central Package Management (CPM) feature:
-
-_For now, this is supported only on CLI. Can be used in combination with other parameters too._
-
-```shell
-dotnet new formsclasslib -n MyApp.UI -cpm
-```
-
 Page:
+
 ```shell
-dotnet new forms-page -n LoginPage -na MyApp.Views
+dotnet new forms-page -n Login -na MyApp.Views
 ```
 ```shell
-dotnet new forms-page-cs -n HomePage -na MyApp.Views
+dotnet new forms-page-cs -n Home -na MyApp.Views
 ```
 
 View:
+
 ```shell
-dotnet new forms-view -n CardView -na MyApp.Views
+dotnet new forms-view -n Card -na MyApp.Views
 ```
 ```shell
-dotnet new forms-view-cs -n ContactsView -na MyApp.Views
+dotnet new forms-view-cs -n Order -na MyApp.Views
 ```
 
 Shell:
+
 ```shell
-dotnet new forms-shell -n AppShell -na MyApp
+dotnet new forms-shell -n App -na MyApp
 ```
 ```shell
-dotnet new forms-shell-cs -n MobileShell -na MyApp
+dotnet new forms-shell-cs -n Mobile -na MyApp
 ```
 
 Resource Dictionary:
 
 With C# code-behind file:
+
 ```shell
 dotnet new forms-resdict -n DefaultTheme -na MyApp.Themes
 ```
-Without C# code-behind file - Xaml only (Option can be specified as `-xo` or `--xaml-only`):
+
+Without C# code-behind file - Xaml only (The option to be specified is `-xo` or `--xaml-only`):
+
 ```shell
 dotnet new forms-resdict -n DarkTheme -na MyApp.Themes -xo
 ```

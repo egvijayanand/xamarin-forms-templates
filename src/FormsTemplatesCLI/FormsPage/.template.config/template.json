@@ -22,7 +22,7 @@
             "path": "FormsPage.1.xaml"
         },
         {
-            "path": "FormsPage.1.xaml.cs",
+            "path": "FormsPage.1Page.xaml.cs",
             "condition": "(!XamlOnly)"
         }
     ],
@@ -54,7 +54,7 @@
                 {
                     "condition": "(XamlOnly)",
                     "exclude": [
-                        "FormsPage.1.xaml.cs"
+                        "FormsPage.1Page.xaml.cs"
                     ]
                 }
             ]

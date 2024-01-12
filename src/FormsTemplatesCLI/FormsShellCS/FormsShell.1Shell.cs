@@ -2,9 +2,9 @@
 
 namespace MyApp.Namespace
 {
-    public partial class FormsShell__1 : Shell
+    public partial class FormsShell__1Shell : Shell
     {
-        public FormsShell__1()
+        public FormsShell__1Shell()
         {
             // Flyout Items
             //Items.Add(new FlyoutItem()

@@ -4,9 +4,9 @@ using Xamarin.Forms.Xaml;
 namespace MyApp.Namespace
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FormsView__1 : ContentView
+    public partial class FormsPage__1Page : ContentPage
     {
-        public FormsView__1()
+        public FormsPage__1Page()
         {
             InitializeComponent();
         }

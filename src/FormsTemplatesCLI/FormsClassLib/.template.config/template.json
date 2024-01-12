@@ -69,6 +69,12 @@
             "defaultValue": "false",
             "description": "If true, includes reference to the Xamarin.Essentials NuGet package."
         },
+        "include-essentials-interfaces": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "If true, includes reference to the Xamarin.Essentials.Interfaces NuGet package."
+        },
         "include-mvvm-toolkit": {
             "type": "parameter",
             "datatype": "bool",
@@ -95,23 +101,27 @@
             "defaultValue": "false",
             "description": "Option to skip creating a solution file."
         },
-        "AddToolkitPackage": {
+        "AddToolkit": {
             "type": "computed",
             "value": "(include-toolkit || all-supported-packages)"
         },
-        "AddMarkupPackage": {
+        "AddMarkup": {
             "type": "computed",
             "value": "(include-markup || all-supported-packages)"
         },
-        "AddEssentialsPackage": {
+        "AddEssentials": {
             "type": "computed",
             "value": "(include-essentials || all-supported-packages)"
         },
-        "AddMvvmToolkitPackage": {
+        "AddEssentialsInterfaces": {
+            "type": "computed",
+            "value": "(include-essentials-interfaces)"
+        },
+        "AddMvvmToolkit": {
             "type": "computed",
             "value": "(include-mvvm-toolkit || all-supported-packages)"
         },
-        "AddSharedToolkitPackage": {
+        "AddSharedToolkit": {
             "type": "computed",
             "value": "(include-shared-toolkit || all-supported-packages)"
         },

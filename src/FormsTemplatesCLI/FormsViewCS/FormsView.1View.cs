@@ -2,9 +2,9 @@
 
 namespace MyApp.Namespace
 {
-    public partial class FormsView__1 : ContentView
+    public partial class FormsView__1View : ContentView
     {
-        public FormsView__1()
+        public FormsView__1View()
         {
             Content = new StackLayout()
             {
