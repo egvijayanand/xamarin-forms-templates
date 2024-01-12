@@ -73,7 +73,7 @@
             <IncludeInVSIX>true</IncludeInVSIX>
             <VSIXSubPath>ItemTemplates\Xamarin.Forms</VSIXSubPath>
         </Content>
-        <None Include="Assets\VijayAnand.FormsTemplates.1.5.0.nupkg"/>
+        <None Include="Assets\VijayAnand.FormsTemplates.1.6.0.nupkg"/>
         <None Include="source.extension.vsixmanifest">
             <SubType>Designer</SubType>
             <Generator>VsixManifestGenerator</Generator>
@@ -104,7 +104,7 @@
         <PackageReference Include="Community.VisualStudio.Toolkit.17" Version="17.0.507" ExcludeAssets="Runtime">
             <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.7.2196">
+        <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.8.2365">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
