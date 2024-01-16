@@ -1,7 +1,70 @@
 Join me on Developer Thoughts (https://egvijayanand.in/), an exclusive blog for articles on Xamarin.Forms, .NET MAUI and Blazor.
 
-What's new in ver. 1.6.0:
+What's new in ver. 1.7.0:
 -------------------------
+1. A revolutionary generic item template, in XAML and C#, for creating items of any type.
+
+And it is named forms-item and forms-item-cs
+
+Both need one required parameter, -b / --base, the base type.
+
+Optionally takes another parameter, -g / --generic, to specify the generic base type.
+
+In addition, the XAML template takes one more parameter, -xo / --xaml-only, when defined, generates only the XAML definition.
+
+Note: Namespace resolution in both XAML and C# file is left to the user as deriving them with the template is outside its scope.
+
+Example:
+
+dotnet new forms-item -n ThemePopup -b xct:Popup -p:na MyApp.Views
+
+Output: ThemePopup.xaml and ThemePopup.xaml.cs
+
+public partial class ThemePopup : Popup {}
+
+dotnet new forms-item -n SearchPage -b FormsPage -g SearchViewModel -p:na MyApp.Views
+
+Output: SearchPage.xaml and SearchPage.xaml.cs
+
+public partial class SearchPage : FormsPage<SearchViewModel> {}
+
+2. Introduced an item template to generate Page and its ViewModel in a single command, available for both XAML and C#.
+
+The Page will be generated in the Views folder and ViewModel will be generated in the ViewModels folder.
+
+Can also be overridden to generate in the same folder with the -sf | --same-folder option.
+
+The ViewModels are generated with the base class titled BaseViewModel (implementation left to the user).
+
+Including CommunityToolkit.Mvvm, an officially supported NuGet package, would be the best fit as it makes it easy to work with the MVVM design pattern.
+
+And it's recommended to use this MVVM template from the project root. So that output is aligned to the folder structure.
+
+Note: Don't suffix anything to the name, it'll be included automatically.
+
+dotnet new forms-mvvm -n Login -p:na MyApp
+
+dotnet new forms-mvvm-cs -n Search -p:na MyApp
+
+Output structure:
+
+XAML:
+
+ViewModels
+    LoginViewModel.cs
+Views
+    LoginPage.xaml
+    LoginPage.xaml.cs
+
+C#:
+
+ViewModels
+    SearchViewModel.cs
+Views
+    SearchPage.cs
+
+v1.6.0:
+
 1. Introduced an option to add a reference to Xamarin.Essentials.Interfaces NuGet package, an explicit option
 
 2. Auto inclusion of the Type of the Item template that is created for Page, Shell, and Views

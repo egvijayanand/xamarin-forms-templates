@@ -65,6 +65,10 @@ Explicit option:
 
 |Item|Template Name|
 |:---:|:---:|
+|[Xamarin.Forms Item (XAML)](#generic-item-templates)|forms-item|
+|[Xamarin.Forms Item (C#)](#generic-item-templates)|forms-item-cs|
+|[ContentPage and ViewModel (XAML)](#mvvm-item-templates)|forms-mvvm|
+|[ContentPage and ViewModel (C#)](#mvvm-item-templates)|forms-mvvm-cs|
 |ContentPage (XAML)|forms-page|
 |ContentPage (C#)|forms-page-cs|
 |ContentView (XAML)|forms-view|
@@ -117,8 +121,73 @@ And `-na` denotes the namespace under which the file is to be created (Can also 
 
 *While working with .NET 7 or higher SDK, the namespace parameter in short notation needs to be passed as `-p:na` (i.e., it needs to be prefixed with `-p:`).*
 
-Page:
+#### Generic Item Templates:
 
+* A revolutionary generic item template, in XAML and C#, for creating items of any type
+* And it is named `forms-item` and `forms-item-cs`
+* Both need one required parameter, `-b` / `--base`, the base type
+* Optionally takes another parameter, `-g` / `--generic`, to specify the generic base type
+* In addition, the XAML template takes one more parameter, `-xo` / `--xaml-only`, when defined, generates only the XAML definition
+
+*Note: Namespace resolution in both XAML and C# files is left to the user as deriving them with the template is outside its scope.*
+
+Example:
+```shell
+dotnet new forms-item -n ThemePopup -b xct:Popup -p:na MyApp.Views
+```
+
+**Output:** `ThemePopup.xaml` and `ThemePopup.xaml.cs`
+
+```cs
+public partial class ThemePopup : Popup {}
+```
+
+```shell
+dotnet new forms-item -n SearchPage -b FormsPage -g SearchViewModel -p:na MyApp.Views
+```
+
+**Output:** `SearchPage.xaml` and `SearchPage.xaml.cs`
+
+```cs
+public partial class SearchPage : FormsPage<SearchViewModel> {}
+```
+
+#### MVVM Item Templates:
+
+* Introduced an item template to generate Page and its ViewModel in a single command, available for both XAML and C#
+* The Page will be generated in the Views folder and ViewModel will be generated in the ViewModels folder
+* Can also be overridden to generate in the same folder with the `-sf` | `--same-folder` option
+* The ViewModels are generated with the base class titled `BaseViewModel` *(implementation left to the user)*
+* Including [CommunityToolkit.Mvvm](https://www.nuget.org/packages/CommunityToolkit.Mvvm), an officially supported NuGet package, would be the best fit as it makes it easy to work with the MVVM design pattern
+* And it's recommended to use this MVVM template from the project root. So that output is aligned to the folder structure
+
+*Note: Don't suffix anything to the name, it'll be included automatically.*
+
+```shell
+dotnet new forms-mvvm -n Login -p:na MyApp
+```
+```shell
+dotnet new forms-mvvm-cs -n Search -p:na MyApp
+```
+
+**Output Structure:**
+
+XAML:
+
+ViewModels
+&emsp;LoginViewModel.cs
+Views
+&emsp;LoginPage.xaml
+&emsp;LoginPage.xaml.cs
+
+C#:
+
+ViewModels
+&emsp;SearchViewModel.cs
+Views
+&emsp;SearchPage.cs
+
+**Page:**
 ```shell
 dotnet new forms-page -n Login -na MyApp.Views
 ```
@@ -126,8 +195,7 @@ dotnet new forms-page -n Login -na MyApp.Views
 dotnet new forms-page-cs -n Home -na MyApp.Views
 ```
 
-View:
-
+**View:**
 ```shell
 dotnet new forms-view -n Card -na MyApp.Views
 ```
@@ -135,8 +203,7 @@ dotnet new forms-view -n Card -na MyApp.Views
 dotnet new forms-view-cs -n Order -na MyApp.Views
 ```
 
-Shell:
-
+**Shell:**
 ```shell
 dotnet new forms-shell -n App -na MyApp
 ```
@@ -144,16 +211,14 @@ dotnet new forms-shell -n App -na MyApp
 dotnet new forms-shell-cs -n Mobile -na MyApp
 ```
 
-Resource Dictionary:
+**Resource Dictionary:**
 
 With C# code-behind file:
-
 ```shell
 dotnet new forms-resdict -n DefaultTheme -na MyApp.Themes
 ```
 
 Without C# code-behind file - Xaml only (The option to be specified is `-xo` or `--xaml-only`):
-
 ```shell
 dotnet new forms-resdict -n DarkTheme -na MyApp.Themes -xo
 ```

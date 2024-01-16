@@ -1,0 +1,54 @@
+{
+    "$schema": "https://json.schemastore.org/template",
+    "author": "Vijay Anand E G",
+    "defaultName": "FormsItem1",
+    "classifications": [
+        "Xamarin",
+        "Android",
+        "iOS",
+        "macOS",
+        "Windows",
+        "Code"
+    ],
+    "identity": "VijayAnand.FormsItemCS",
+    "groupIdentity": "VijayAnand.FormsTemplates.Item.Code",
+    "description": "An item template for Xamarin.Forms Item in C#",
+    "name": "Xamarin.Forms Item (C#)",
+    "shortName": "forms-item-cs",
+    "sourceName": "FormsItem.1",
+    "primaryOutputs": [
+        {
+            "path": "FormsItem.1.cs"
+        }
+    ],
+    "tags": {
+        "language": "C#",
+        "type": "item"
+    },
+    "symbols": {
+        "base": {
+            "isRequired": true,
+            "type": "parameter",
+            "description": "Base type for the item.",
+            "datatype": "text",
+            "replaces": "ContentPage"
+        },
+        "generic": {
+            "type": "parameter",
+            "description": "Generic base type for the item.",
+            "datatype": "text",
+            "defaultValue": "",
+            "replaces": "TObject"
+        },
+        "namespace": {
+            "type": "parameter",
+            "datatype": "text",
+            "description": "namespace for the generated code",
+            "replaces": "MyApp.Namespace"
+        },
+        "IsGeneric": {
+            "type": "computed",
+            "value": "(generic != \"\")"
+        }
+    }
+}
