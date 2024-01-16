@@ -1,0 +1,70 @@
+{
+    "$schema": "https://json.schemastore.org/template",
+    "author": "Vijay Anand E G",
+    "defaultName": "Forms1",
+    "classifications": [
+        "Xamarin",
+        "Android",
+        "iOS",
+        "macOS",
+        "Windows",
+        "MVVM",
+        "Xaml"
+    ],
+    "identity": "VijayAnand.FormsMvvm",
+    "groupIdentity": "VijayAnand.FormsTemplates.Mvvm.Xaml",
+    "description": "An item template for Xamarin.Forms ContentPage in XAML and its ViewModel",
+    "name": "Xamarin.Forms ContentPage and ViewModel",
+    "shortName": "forms-mvvm",
+    "sourceName": "Forms.1",
+    "primaryOutputs": [
+        {
+            "path": "Forms.1Page.xaml"
+        },
+        {
+            "path": "Forms.1Page.xaml.cs"
+        },
+        {
+            "path": "Forms.1ViewModel.cs"
+        }
+    ],
+    "tags": {
+        "language": "C#",
+        "type": "item"
+    },
+    "sources": [
+        {
+            "condition": "(SameFolder)",
+            "include": [
+                "**/*"
+            ]
+        },
+        {
+            "condition": "(!SameFolder)",
+            "rename": {
+                "Forms.1Page.xaml": "Views/Forms.1Page.xaml",
+                "Forms.1Page.xaml.cs": "Views/Forms.1Page.xaml.cs",
+                "Forms.1ViewModel.cs": "ViewModels/Forms.1ViewModel.cs"
+            }
+        }
+    ],
+    "symbols": {
+        "namespace": {
+            "type": "parameter",
+            "datatype": "text",
+            "description": "namespace for the generated code",
+            "replaces": "MyApp.Namespace"
+        },
+        "same-folder": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "Option to create the artifacts in the same folder.",
+            "displayName": "Option to create the artifacts in the same folder"
+        },
+        "SameFolder": {
+            "type": "computed",
+            "value": "(same-folder)"
+        }
+    }
+}
