@@ -359,3 +359,4 @@ MigrationBackup/
 /src/FormsTemplatesCLI/Install-Template.bat
 /src/FormsTemplatesCLI/Install-Debug-Template.bat
 /src/FormsTemplatesCLI/Install-Release-Template.bat
+/xamarin-forms-templates.code-workspace

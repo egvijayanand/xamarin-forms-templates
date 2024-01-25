@@ -1,6 +1,10 @@
-﻿using System.Reflection;
+﻿using Microsoft.VisualStudio.Shell;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using VijayAnand.XFormsTemplates;
+
+// For Visual Studio to locate and load the component assembly during runtime
+[assembly: ProvideCodeBase(AssemblyName = "VijayAnand.XFormsTemplates")]
 
 [assembly: AssemblyTitle(Vsix.Name)]
 [assembly: AssemblyDescription(Vsix.Description)]
@@ -13,8 +17,9 @@ using VijayAnand.XFormsTemplates;
 
 [assembly: ComVisible(false)]
 
-[assembly: AssemblyVersion(Vsix.Version)]
-[assembly: AssemblyFileVersion(Vsix.Version)]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyInformationalVersion("1.0.0.0")]
 
 namespace System.Runtime.CompilerServices
 {

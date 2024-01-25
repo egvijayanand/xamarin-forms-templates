@@ -123,13 +123,26 @@ And `-na` denotes the namespace under which the file is to be created (Can also 
 
 #### Generic Item Templates:
 
+![Xamarin.Forms Generic Item Templates by Vijay Anand E G](images/xamarin-forms-add-new-item.png)
+
 * A revolutionary generic item template, in XAML and C#, for creating items of any type
-* And it is named `forms-item` and `forms-item-cs`
+* Supported both within the VS2022 IDE and CLI
+* On CLI, it is named as `forms-item` and `forms-item-cs`
+* The same set of parameters is defined in the UI as `Dropdown`, `TextBox` and `CheckBox` for ease of use
 * Both need one required parameter, `-b` / `--base`, the base type
 * Optionally takes another parameter, `-g` / `--generic`, to specify the generic base type
 * In addition, the XAML template takes one more parameter, `-xo` / `--xaml-only`, when defined, generates only the XAML definition
+* Frequently used base types are loaded in the Editable dropdown, user can also enter their value here
+* Ensure the values are entered in Pascal notation. XAML templates support XML namespace prefix, quite like how it is used in real world (`xct:Popup`)
+* The one big advantage of using this on IDE is the relative namespace to the folder where the item is created whereas on CLI, this defaults to the root namespace. As relative namespace resolution is yet to be fully supported by the CLI templating engine and is actively tracked [here](https://github.com/dotnet/templating/issues/6010)
+
+![Xamarin.Forms Generic Item Dialog by Vijay Anand E G](images/xamarin-forms-generic-item-dialog.png)
 
 *Note: Namespace resolution in both XAML and C# files is left to the user as deriving them with the template is outside its scope.*
+
+*Tip 1: For XAML template, pass the `xmlns` scope, like `xct:Popup`, as part of the input parameter value and it'll be used appropriately in the generated source files.*
+
+*Tip: Tip: Use `local` scope to refer to the types in the same directory like `Views`. For e.g., `local:BasePage`.*
 
 Example:
 ```shell
