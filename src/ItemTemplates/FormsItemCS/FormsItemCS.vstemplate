@@ -1,0 +1,22 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+	<TemplateData>
+		<DefaultName>FormsItem.cs</DefaultName>
+		<Name>Generic Item (C#)</Name>
+		<Description>Generic Xamarin.Forms item template in C#.</Description>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>Xamarin.Forms</ProjectSubType>
+		<SortOrder>110</SortOrder>
+		<Icon>__TemplateIcon.ico</Icon>
+	</TemplateData>
+	<TemplateContent>
+		<References />
+		<ProjectItem TargetFileName="$fileinputname$.cs" ReplaceParameters="true">FormsItemCS.cs</ProjectItem>
+		<CustomParameters>
+			<CustomParameter Name="$basetype$" Value="" />
+		</CustomParameters>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>VijayAnand.XFormsTemplates, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7550554040ebdd44</Assembly>
+		<FullClassName>VijayAnand.XFormsTemplates.CustomActionWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>
