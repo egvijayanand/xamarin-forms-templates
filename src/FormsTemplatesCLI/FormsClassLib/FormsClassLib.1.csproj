@@ -4,10 +4,21 @@
         <TargetFramework>LIB_TFM</TargetFramework>
         <!-- Project Options -->
         <Nullable>enable</Nullable>
+        <!--#if (Preview)-->
+        <LangVersion>preview</LangVersion>
+        <!--#else-->
         <LangVersion>latest</LangVersion>
+        <!--#endif-->
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>FormsClassLib._1</RootNamespace>
     </PropertyGroup>
+    <!--#if (CentralPkgMgmt)-->
+
+    <ItemGroup>
+        <None Remove="Directory.Packages.props" />
+    </ItemGroup>
+    <!--#endif-->
+
     <ItemGroup>
         <!--#if (CentralPkgMgmt)-->
         <PackageReference Include="Xamarin.Forms" />
@@ -47,7 +58,11 @@
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
         <!--#endif-->
         <!--#if (AddSharedToolkit)-->
+        <!--#if (Preview)-->
+        <PackageReference Include="VijayAnand.Toolkit.Markup" Version="4.*-*" />
+        <!--#else-->
         <PackageReference Include="VijayAnand.Toolkit.Markup" Version="3.*" />
+        <!--#endif-->
         <!--#endif-->
         <!--#endif-->
     </ItemGroup>
