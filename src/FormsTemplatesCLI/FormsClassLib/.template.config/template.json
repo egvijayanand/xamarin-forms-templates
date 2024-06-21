@@ -18,7 +18,8 @@
     "sourceName": "FormsClassLib.1",
     "tags": {
         "language": "C#",
-        "type": "project"
+        "type": "solution",
+        "vs_parametersToHide": "no-solution-file"
     },
     "guids": [
         "104D078F-F441-4A4A-A89B-21C40D7B8C10",
@@ -44,11 +45,18 @@
             "replaces": "LIB_TFM",
             "defaultValue": "netstandard2.0"
         },
+        "central-pkg-mgmt": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "Option to configure NuGet Central Package Management (CPM).",
+            "displayName": "Option to configure _NuGet Central Package Management (CPM)"
+        },
         "all-supported-packages": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "Option to add all supported NuGet package reference.",
+            "description": "Option to add all supported NuGet package reference (Essentials Interfaces is explicit).",
             "displayName": "_Add all supported NuGet package reference"
         },
         "include-toolkit": {
@@ -85,15 +93,15 @@
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "Option to add VijayAnand.Toolkit.Markup NuGet package reference.",
+            "description": "Option to add VijayAnand.Toolkit.Markup (Shared Toolkit) NuGet package reference.",
             "displayName": "Add VijayAnand.Toolkit.Markup NuGet package reference"
         },
-        "central-pkg-mgmt": {
+        "Preview": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "Option to configure NuGet Central Package Management (CPM).",
-            "displayName": "Option to configure NuGet Central Package Management (CPM)"
+            "description": "Option to add preview version of VijayAnand.Toolkit.Markup NuGet package reference.",
+            "displayName": "Add preview version of VijayAnand.Toolkit.Markup NuGet package reference"
         },
         "no-solution-file": {
             "type": "parameter",
@@ -143,13 +151,13 @@
         {
             "modifiers": [
                 {
-                    "condition": "(no-solution-file || !(HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+                    "condition": "(no-solution-file)",
                     "exclude": [
                         "FormsClassLib.1.sln"
                     ]
                 },
                 {
-                    "condition": "(!CentralPkgMgmt || !(HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+                    "condition": "(!CentralPkgMgmt)",
                     "exclude": [
                         "Directory.Packages.props"
                     ]

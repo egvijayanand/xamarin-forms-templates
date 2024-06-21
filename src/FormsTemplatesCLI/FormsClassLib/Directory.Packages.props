@@ -3,7 +3,7 @@
         <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     </PropertyGroup>
     <ItemGroup>
-        <PackageVersion Include="Xamarin.Forms" Version="5.0.0.2622" />
+        <PackageVersion Include="Xamarin.Forms" Version="5.0.0.2662" />
         <!--#if (AddEssentials)-->
         <PackageVersion Include="Xamarin.Essentials" Version="1.8.1" />
         <!--#endif-->
@@ -20,7 +20,11 @@
         <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.2.2" />
         <!--#endif-->
         <!--#if (AddSharedToolkit)-->
-        <PackageVersion Include="VijayAnand.Toolkit.Markup" Version="3.2.0" />
+        <!--#if (Preview)-->
+        <PackageVersion Include="VijayAnand.Toolkit.Markup" Version="4.0.0-preview.3" />
+        <!--#else-->
+        <PackageVersion Include="VijayAnand.Toolkit.Markup" Version="3.4.0" />
+        <!--#endif-->
         <!--#endif-->
     </ItemGroup>
 </Project>

@@ -1,8 +1,12 @@
 Join me on Developer Thoughts (https://egvijayanand.in/), an exclusive blog for articles on Xamarin.Forms, .NET MAUI and Blazor.
 
-What's new in ver. 1.7.0:
+What's new in ver. 1.8.0:
 -------------------------
-1. A revolutionary generic item template, in XAML and C#, for creating items of any type.
+Introduced using the NuGet CPM feature from within Visual Studio IDE.
+
+v1.7.0
+
+1. An innovative generic item template, in XAML and C#, for creating items of any type.
 
 And it is named forms-item and forms-item-cs
 
