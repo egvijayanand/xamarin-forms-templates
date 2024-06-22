@@ -83,7 +83,7 @@
             <IncludeInVSIX>true</IncludeInVSIX>
             <VSIXSubPath>ItemTemplates\Xamarin.Forms</VSIXSubPath>
         </Content>
-        <None Include="Assets\VijayAnand.FormsTemplates.1.6.0.nupkg" />
+        <None Include="Assets\VijayAnand.FormsTemplates.1.8.0.nupkg" />
         <Content Include="ItemTemplates\FormsItem.zip">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
             <IncludeInVSIX>true</IncludeInVSIX>
@@ -126,16 +126,12 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Community.VisualStudio.Toolkit" Version="17.0.75.152-pre" ExcludeAssets="Runtime" />
-        <PackageReference Include="Microsoft.VisualStudio.TemplateWizardInterface">
-            <Version>17.5.33428.366</Version>
-        </PackageReference>
-        <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.8.2365">
+        <PackageReference Include="Microsoft.VisualStudio.TemplateWizardInterface" Version="17.10.40170" />
+        <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.10.2185">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
-        <PackageReference Include="Newtonsoft.Json">
-            <Version>13.0.3</Version>
-        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
     <ItemGroup>
         <Page Include="GenericItemDialog.xaml">
