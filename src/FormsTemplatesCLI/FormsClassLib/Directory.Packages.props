@@ -4,6 +4,9 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageVersion Include="Xamarin.Forms" Version="5.0.0.2662" />
+        <!--#if (AddMaps)-->
+        <PackageVersion Include="Xamarin.Forms.Maps" Version="5.0.0.2662" />
+        <!--#endif-->
         <!--#if (AddEssentials)-->
         <PackageVersion Include="Xamarin.Essentials" Version="1.8.1" />
         <!--#endif-->

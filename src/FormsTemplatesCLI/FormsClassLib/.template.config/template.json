@@ -50,51 +50,63 @@
             "datatype": "bool",
             "defaultValue": "false",
             "description": "Option to configure NuGet Central Package Management (CPM).",
-            "displayName": "Option to configure _NuGet Central Package Management (CPM)"
+            "displayName": "Use _NuGet Central Package Management (CPM)"
         },
         "all-supported-packages": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "Option to add all supported NuGet package reference (Essentials Interfaces is explicit).",
-            "displayName": "_Add all supported NuGet package reference"
+            "description": "Option to add all supported NuGet package reference (Maps and Essentials Interfaces are explicit).",
+            "displayName": "_Add all supported NuGet package reference (Maps and Essentials Interfaces are explicit)"
         },
         "include-toolkit": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "If true, includes reference to the Xamarin.CommunityToolkit NuGet package."
+            "description": "If true, includes reference to the Xamarin.CommunityToolkit NuGet package.",
+            "displayName": "Add Xamarin.Community_Toolkit NuGet package reference"
         },
         "include-markup": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "If true, includes reference to the Xamarin.CommunityToolkit.Markup NuGet package."
+            "description": "If true, includes reference to the Xamarin.CommunityToolkit.Markup NuGet package.",
+            "displayName": "Add Xamarin.CommunityToolkit._Markup NuGet package reference"
         },
         "include-essentials": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "If true, includes reference to the Xamarin.Essentials NuGet package."
-        },
-        "include-essentials-interfaces": {
-            "type": "parameter",
-            "datatype": "bool",
-            "defaultValue": "false",
-            "description": "If true, includes reference to the Xamarin.Essentials.Interfaces NuGet package."
+            "description": "If true, includes reference to the Xamarin.Essentials NuGet package.",
+            "displayName": "Add Xamarin._Essentials NuGet package reference"
         },
         "include-mvvm-toolkit": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "If true, includes reference to the CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) NuGet package."
+            "description": "If true, includes reference to the CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) NuGet package.",
+            "displayName": "Add CommunityToolkit.Mvvm (aka Microsoft MV_VM Toolkit) NuGet package reference"
         },
         "include-shared-toolkit": {
             "type": "parameter",
             "datatype": "bool",
             "defaultValue": "false",
-            "description": "Option to add VijayAnand.Toolkit.Markup (Shared Toolkit) NuGet package reference.",
-            "displayName": "Add VijayAnand.Toolkit.Markup NuGet package reference"
+            "description": "Option to add VijayAnand.Toolkit.Markup (aka Shared Toolkit) NuGet package reference.",
+            "displayName": "Add VijayAnand.Toolkit.Markup (aka _Shared Toolkit) NuGet package reference"
+        },
+        "include-maps": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "If true, includes reference to the Xamarin.Forms.Maps NuGet package.",
+            "displayName": "Add Xamarin.Forms.Maps NuGet package reference"
+        },
+        "include-essentials-interfaces": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "If true, includes reference to the Xamarin.Essentials.Interfaces NuGet package.",
+            "displayName": "Add Xamarin.Essentials._Interfaces NuGet package reference"
         },
         "Preview": {
             "type": "parameter",
@@ -124,6 +136,10 @@
         "AddEssentialsInterfaces": {
             "type": "computed",
             "value": "(include-essentials-interfaces)"
+        },
+        "AddMaps": {
+            "type": "computed",
+            "value": "(include-maps)"
         },
         "AddMvvmToolkit": {
             "type": "computed",

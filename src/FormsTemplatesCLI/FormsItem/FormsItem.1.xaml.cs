@@ -1,5 +1,9 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+#if Toolkit
+
+using Xamarin.CommunityToolkit.UI.Views;
+#endif
 
 namespace MyApp.Namespace
 {

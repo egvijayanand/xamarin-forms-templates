@@ -3,9 +3,17 @@
     "icon": "ide/icon.png",
     "symbolInfo": [
         {
+            "id": "central-pkg-mgmt",
+            "name": {
+                "text": "Use _NuGet Central Package Management (CPM)"
+            },
+            "isVisible": true,
+            "defaultValue": "false"
+        },
+        {
             "id": "all-supported-packages",
             "name": {
-                "text": "_Add all supported NuGet package reference (Essentials Interfaces is explicit)"
+                "text": "_Add all supported NuGet package reference (Maps and Essentials Interfaces are explicit)"
             },
             "isVisible": true,
             "defaultValue": "false"
@@ -35,14 +43,6 @@
             "defaultValue": "false"
         },
         {
-            "id": "include-essentials-interfaces",
-            "name": {
-                "text": "Add Xamarin.Essentials._Interfaces NuGet package reference"
-            },
-            "isVisible": true,
-            "defaultValue": "false"
-        },
-        {
             "id": "include-mvvm-toolkit",
             "name": {
                 "text": "Add CommunityToolkit.Mvvm (aka Microsoft MV_VM Toolkit) NuGet package reference"
@@ -53,15 +53,23 @@
         {
             "id": "include-shared-toolkit",
             "name": {
-                "text": "Add and configure VijayAnand.Toolkit.Markup (_Shared Toolkit) NuGet package reference"
+                "text": "Add VijayAnand.Toolkit.Markup (aka _Shared Toolkit) NuGet package reference"
             },
             "isVisible": true,
             "defaultValue": "false"
         },
         {
-            "id": "central-pkg-mgmt",
+            "id": "include-maps",
             "name": {
-                "text": "Use _NuGet Central Package Management (CPM)"
+                "text": "Add Xamarin.Forms.Maps NuGet package reference"
+            },
+            "isVisible": true,
+            "defaultValue": "false"
+        },
+        {
+            "id": "include-essentials-interfaces",
+            "name": {
+                "text": "Add Xamarin.Essentials._Interfaces NuGet package reference"
             },
             "isVisible": true,
             "defaultValue": "false"

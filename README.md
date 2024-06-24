@@ -2,11 +2,13 @@
 
 Join me on [**Developer Thoughts**](https://egvijayanand.in/), an exclusive blog for Xamarin.Forms, .NET MAUI, and Blazor with articles on working with it.
 
+Consult this [Xamarin.Forms Templates](https://egvijayanand.in/2024/01/26/introducing-xamarin-forms-templates/) article for further details.
+
 #### Available to install from
 
 |NuGet|VS Marketplace|
 |:---:|:---:|
-|[![VijayAnand.FormsTemplates - NuGet Package](https://badgen.net/nuget/v/VijayAnand.FormsTemplates/?icon=nuget)](https://www.nuget.org/packages/VijayAnand.FormsTemplates/)|[![Xamarin.Forms Project and Item Templates - VS Marketplace](https://badgen.net/vs-marketplace/v/egvijayanand.xamarin-forms-templates?icon=visualstudio&foo=bar)](https://marketplace.visualstudio.com/items?itemName=egvijayanand.xamarin-forms-templates)|
+|[![VijayAnand.FormsTemplates - NuGet Package](https://badgen.net/nuget/v/VijayAnand.FormsTemplates/?icon=nuget&foo=bar)](https://www.nuget.org/packages/VijayAnand.FormsTemplates/)|[![Xamarin.Forms Project and Item Templates - VS Marketplace](https://badgen.net/vs-marketplace/v/egvijayanand.xamarin-forms-templates?icon=visualstudio&foo=bar)](https://marketplace.visualstudio.com/items?itemName=egvijayanand.xamarin-forms-templates)|
 
 #### Access within Visual Studio IDE
 
@@ -47,7 +49,7 @@ dotnet new update
 
 Project template for Xamarin.Forms 5 Class Library and is named as `formsclasslib`
 
-Class library project template take the below optional parameters to override its target framework and to include the officially supported [Xamarin.CommunityToolkit](https://www.nuget.org/packages/Xamarin.CommunityToolkit), [Xamarin.CommunityToolkit.Markup](https://www.nuget.org/packages/Xamarin.CommunityToolkit.Markup), [Xamarin.Essentials](https://www.nuget.org/packages/Xamarin.Essentials), [CommunityToolkit.Mvvm](https://www.nuget.org/packages/CommunityToolkit.Mvvm) (aka Microsoft MVVM Toolkit), [VijayAnand.Toolkit.Markup](https://www.nuget.org/packages/VijayAnand.Toolkit.Markup) (the Shared Toolkit) or all NuGet packages:
+Class library project template take the below optional parameters to override its target framework and to include the officially released  [Xamarin.Forms.Maps](https://www.nuget.org/packages/Xamarin.Forms.Maps), [Xamarin.CommunityToolkit](https://www.nuget.org/packages/Xamarin.CommunityToolkit), [Xamarin.CommunityToolkit.Markup](https://www.nuget.org/packages/Xamarin.CommunityToolkit.Markup), [Xamarin.Essentials](https://www.nuget.org/packages/Xamarin.Essentials), [CommunityToolkit.Mvvm](https://www.nuget.org/packages/CommunityToolkit.Mvvm) (aka Microsoft MVVM Toolkit), [VijayAnand.Toolkit.Markup](https://www.nuget.org/packages/VijayAnand.Toolkit.Markup) (aka Shared Toolkit) or all NuGet packages:
 
 * `-f` | `--framework` - Default value is `netstandard2.0`
 * `-asp` | `--all-supported-packages` - Default value is `false`
@@ -59,9 +61,10 @@ Class library project template take the below optional parameters to override it
 
 Explicit option:
 
+* `-inm` | `--include-maps` - Default value is `false`
 * `-iei` | `--include-essentials-interfaces` - Default value is `false`
 
-*Note: The NuGet package version being added out-of-the-box are v2.0.x for the Xamarin Toolkit packages, v1.8.x for the Xamarin.Essentials package, and v8.2.x for the MVVM Toolkit package.*
+*Note: The NuGet package version being added out-of-the-box are v5.x for the Xamarin packages, v2.x for the Xamarin Toolkit packages, v1.x for the Xamarin.Essentials package, and v8.x for the MVVM Toolkit package. The latest stable version.*
 
 |Item|Template Name|
 |:---:|:---:|
@@ -94,18 +97,18 @@ dotnet new formsclasslib -o MyApp.Core -f netstandard2.1
 Option to include NuGet packages:
 
 ```shell
-dotnet new formsclasslib -o MyApp.UI -it -im -ie -iei -imt -ist
+dotnet new formsclasslib -o MyApp.UI -it -im -ie -iei -imt -inm -ist
 ```
 
-In a single parameter (Essentials Interfaces is an exception, to be explicitly mentioned):
+In a single parameter (Maps and Essentials Interfaces are exceptions, to be explicitly mentioned):
 
 ```shell
-dotnet new formsclasslib -o MyApp.UI -asp -iei
+dotnet new formsclasslib -o MyApp.UI -asp -iei -inm
 ```
 
 NuGet Central Package Management (CPM) feature:
 
-_For now, this is supported only on CLI. Can be used in combination with other parameters too._
+*This can be used in combination with other parameters too.*
 
 ```shell
 dotnet new formsclasslib -o MyApp.UI -cpm
@@ -125,7 +128,7 @@ And `-na` denotes the namespace under which the file is to be created (Can also 
 
 ![Xamarin.Forms Generic Item Templates by Vijay Anand E G](images/xamarin-forms-add-new-item.png)
 
-* A revolutionary generic item template, in XAML and C#, for creating items of any type
+* An innovative generic item template, in XAML and C#, for creating items of any type
 * Supported both within the VS2022 IDE and CLI
 * On CLI, it is named as `forms-item` and `forms-item-cs`
 * The same set of parameters is defined in the UI as `Dropdown`, `TextBox` and `CheckBox` for ease of use
@@ -142,9 +145,12 @@ And `-na` denotes the namespace under which the file is to be created (Can also 
 
 *Tip 1: For XAML template, pass the `xmlns` scope, like `xct:Popup`, as part of the input parameter value and it'll be used appropriately in the generated source files.*
 
-*Tip: Tip: Use `local` scope to refer to the types in the same directory like `Views`. For e.g., `local:BasePage`.*
+*Tip: Tip: Use `local` scope (a predefined scope in the template) to refer to the types in the same directory like `Views`. For e.g., `local:BasePage`.*
 
 Example:
+
+*Suffixes like Page, View, and so on are necessary while using generic item templates.*
+
 ```shell
 dotnet new forms-item -n ThemePopup -b xct:Popup -p:na MyApp.Views
 ```
@@ -202,36 +208,36 @@ Views
 
 **Page:**
 ```shell
-dotnet new forms-page -n Login -na MyApp.Views
+dotnet new forms-page -n Login -p:na MyApp.Views
 ```
 ```shell
-dotnet new forms-page-cs -n Home -na MyApp.Views
+dotnet new forms-page-cs -n Home -p:na MyApp.Views
 ```
 
 **View:**
 ```shell
-dotnet new forms-view -n Card -na MyApp.Views
+dotnet new forms-view -n Card -p:na MyApp.Views
 ```
 ```shell
-dotnet new forms-view-cs -n Order -na MyApp.Views
+dotnet new forms-view-cs -n Order -p:na MyApp.Views
 ```
 
 **Shell:**
 ```shell
-dotnet new forms-shell -n App -na MyApp
+dotnet new forms-shell -n App -p:na MyApp
 ```
 ```shell
-dotnet new forms-shell-cs -n Mobile -na MyApp
+dotnet new forms-shell-cs -n Mobile -p:na MyApp
 ```
 
 **Resource Dictionary:**
 
 With C# code-behind file:
 ```shell
-dotnet new forms-resdict -n DefaultTheme -na MyApp.Themes
+dotnet new forms-resdict -n DefaultTheme -p:na MyApp.Themes
 ```
 
 Without C# code-behind file - Xaml only (The option to be specified is `-xo` or `--xaml-only`):
 ```shell
-dotnet new forms-resdict -n DarkTheme -na MyApp.Themes -xo
+dotnet new forms-resdict -n DarkTheme -p:na MyApp.Themes -xo
 ```

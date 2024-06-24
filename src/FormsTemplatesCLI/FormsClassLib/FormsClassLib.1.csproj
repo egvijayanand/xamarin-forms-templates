@@ -22,6 +22,9 @@
     <ItemGroup>
         <!--#if (CentralPkgMgmt)-->
         <PackageReference Include="Xamarin.Forms" />
+        <!--#if (AddMaps)-->
+        <PackageReference Include="Xamarin.Forms.Maps" />
+        <!--#endif-->
         <!--#if (AddToolkit)-->
         <PackageReference Include="Xamarin.CommunityToolkit" />
         <!--#endif-->
@@ -42,6 +45,9 @@
         <!--#endif-->
         <!--#else-->
         <PackageReference Include="Xamarin.Forms" Version="5.*" />
+        <!--#if (AddMaps)-->
+        <PackageReference Include="Xamarin.Forms.Maps" Version="5.*" />
+        <!--#endif-->
         <!--#if (AddToolkit)-->
         <PackageReference Include="Xamarin.CommunityToolkit" Version="2.*" />
         <!--#endif-->

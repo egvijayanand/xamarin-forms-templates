@@ -7,6 +7,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+<!--#if (Toolkit)-->
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+<!--#endif-->
     xmlns:local="clr-namespace:MyApp.Namespace"
     x:TypeArguments="TObject"
     mc:Ignorable="d">
@@ -17,6 +20,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+<!--#if (Toolkit)-->
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+<!--#endif-->
     xmlns:local="clr-namespace:MyApp.Namespace"
     mc:Ignorable="d">
 </ContentPage>
@@ -29,6 +35,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+<!--#if (Toolkit)-->
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+<!--#endif-->
     xmlns:local="clr-namespace:MyApp.Namespace"
     x:TypeArguments="TObject"
     mc:Ignorable="d">
@@ -40,6 +49,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+<!--#if (Toolkit)-->
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+<!--#endif-->
     xmlns:local="clr-namespace:MyApp.Namespace"
     mc:Ignorable="d">
 </ContentPage>
