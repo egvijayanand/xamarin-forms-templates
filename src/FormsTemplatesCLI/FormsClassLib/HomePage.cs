@@ -1,5 +1,9 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+#if AddMaps
+
+using Xamarin.Forms.Maps;
+#endif
 #if (AddEssentials || AddEssentialsInterfaces)
 
 using Xamarin.Essentials;

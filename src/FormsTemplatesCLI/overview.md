@@ -1,11 +1,15 @@
 ### CLI Project and Item Templates for developing Xamarin.Forms App that runs on iOS, Android, and Windows
 
+Join me on [**Developer Thoughts**](https://egvijayanand.in/), an exclusive blog for Xamarin.Forms, .NET MAUI, and Blazor with articles on working with it.
+
+Consult this [Xamarin.Forms Templates](https://egvijayanand.in/2024/01/26/introducing-xamarin-forms-templates/) article for further details.
+
 Project template for Xamarin.Forms 5 Class Library and is named as `formsclasslib`
 
-Class library project template take the below optional parameters to override its target framework and to include the officially supported `Xamarin.CommunityToolkit`, `Xamarin.CommunityToolkit.Markup`, `Xamarin.Essentials`, `CommunityToolkit.Mvvm` (aka Microsoft MVVM Toolkit), `VijayAnand.Toolkit.Markup` (the Shared Toolkit) or all NuGet packages:
+Class library project template take the below optional parameters to override its target framework and to include the officially released `Xamarin.Forms.Maps`, `Xamarin.CommunityToolkit`, `Xamarin.CommunityToolkit.Markup`, `Xamarin.Essentials`, `CommunityToolkit.Mvvm` (aka Microsoft MVVM Toolkit), `VijayAnand.Toolkit.Markup` (aka Shared Toolkit) or all NuGet packages:
 
 * `-f` | `--framework` - Default value is `netstandard2.0`
-* `-asp` | `--all-supported-packages` - Default value is `false`
+* `-asp` | `--all-supported-packages` - Default value is `false` (See below)
 * `-it` | `--include-toolkit` - Default value is `false`
 * `-im` | `--include-markup` - Default value is `false`
 * `-ie` | `--include-essentials` - Default value is `false`
@@ -14,14 +18,19 @@ Class library project template take the below optional parameters to override it
 
 Explicit option:
 
+* `-inm` | `--include-maps` - Default value is `false`
 * `-iei` | `--include-essentials-interfaces` - Default value is `false`
 
-*Note: The NuGet package version being added out-of-the-box are v2.0.x for the Xamarin Toolkit packages, v1.8.x for the Xamarin.Essentials package, and v8.2.x for the MVVM Toolkit package.*
+*Note: The NuGet package version being added out-of-the-box are v5.x for the Xamarin packages, v2.x for the Xamarin Toolkit packages, v1.x for the Xamarin.Essentials package, and v8.x for the MVVM Toolkit package. The latest stable version.*
 
 |Item|Template Name|
 |:---:|:---:|
+|Generic Item (XAML)|forms-item|
+|Generic Item (C#)|forms-item-cs|
 |ContentPage (XAML)|forms-page|
 |ContentPage (C#)|forms-page-cs|
+|ContentPage and ViewModel (XAML)|forms-mvvm|
+|ContentPage and ViewModel (C#)|forms-mvvm-cs|
 |ContentView (XAML)|forms-view|
 |ContentView (C#)|forms-view-cs|
 |ResourceDictionary (XAML)|forms-resdict|
@@ -58,18 +67,18 @@ dotnet new formsclasslib -o MyApp.Core -f netstandard2.1
 Option to include NuGet packages:
 
 ```shell
-dotnet new formsclasslib -o MyApp.UI -it -im -ie -iei -imt -ist
+dotnet new formsclasslib -o MyApp.UI -it -im -ie -iei -imt -inm -ist
 ```
 
-In a single parameter (Essentials Interfaces is an exception, to be explicitly mentioned):
+In a single parameter (Maps and Essentials Interfaces are exceptions, to be explicitly mentioned):
 
 ```shell
-dotnet new formsclasslib -o MyApp.UI -asp -iei
+dotnet new formsclasslib -o MyApp.UI -asp -iei -inm
 ```
 
 NuGet Central Package Management (CPM) feature:
 
-_For now, this is supported only on CLI. Can be used in combination with other parameters too._
+*This can be used in combination with other parameters too.*
 
 ```shell
 dotnet new formsclasslib -o MyApp.UI -cpm
@@ -86,6 +95,39 @@ Here, `-n` denotes the name of the Page/View that is to be created (for Pages/Sh
 And `-na` denotes the namespace under which the file is to be created (Can also be specified as `--namespace` in the expanded form).
 
 *While working with .NET 7 or higher SDK, the namespace parameter in short notation needs to be passed as `-p:na` (i.e., it needs to be prefixed with `-p:`).*
+
+Generic Item:
+
+*Suffixes like Page, View, and so on are necessary while using generic item templates.*
+
+```shell
+dotnet new forms-item -n ThemePopup -b xct:Popup -na MyApp.Views
+```
+
+**Output:** `ThemePopup.xaml` and `ThemePopup.xaml.cs`
+
+```cs
+public partial class ThemePopup : Popup {}
+```
+
+```shell
+dotnet new forms-item -n SearchPage -b FormsPage -g SearchViewModel -p:na MyApp.Views
+```
+
+**Output:** `SearchPage.xaml` and `SearchPage.xaml.cs`
+
+```cs
+public partial class SearchPage : FormsPage<SearchViewModel> {}
+```
+
+MVVM:
+
+```shell
+dotnet new forms-mvvm -n Search -na MyApp.Views
+```
+```shell
+dotnet new forms-mvvm-cs -n Settings -na MyApp.Views
+```
 
 Page:
 
