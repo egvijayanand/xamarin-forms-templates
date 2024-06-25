@@ -83,7 +83,7 @@
             <IncludeInVSIX>true</IncludeInVSIX>
             <VSIXSubPath>ItemTemplates\Xamarin.Forms</VSIXSubPath>
         </Content>
-        <None Include="Assets\VijayAnand.FormsTemplates.1.8.0.nupkg" />
+        <None Include="Assets\VijayAnand.FormsTemplates.1.9.0.nupkg" />
         <Content Include="ItemTemplates\FormsItem.zip">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
             <IncludeInVSIX>true</IncludeInVSIX>
