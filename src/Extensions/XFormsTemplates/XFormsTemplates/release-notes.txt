@@ -1,7 +1,13 @@
 Join me on Developer Thoughts (https://egvijayanand.in/), an exclusive blog for articles on Xamarin.Forms, .NET MAUI, and Blazor.
 
-What's new in ver. 1.8.0.0:
+What's new in ver. 1.9.0.0:
 ---------------------------
+Introduced an option to reference Xamarin.Forms.Maps NuGet package.
+
+While using the generic item template, support for adding Xamarin Community Toolkit namespace while defining base types with that particular xmlns scope (xct).
+
+v1.8.0.0:
+
 Introduced using the NuGet CPM feature from within Visual Studio IDE.
 
 v1.7.0.0:

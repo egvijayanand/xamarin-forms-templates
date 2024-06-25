@@ -11,6 +11,9 @@ $endif$
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:$rootnamespace$"
+$if$ ($toolkit$ == true)
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+$endif$
 $if$ ($generic$ == true)
     x:TypeArguments="$typearg$"
 $endif$

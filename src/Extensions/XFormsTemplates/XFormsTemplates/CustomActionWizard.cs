@@ -9,6 +9,8 @@ namespace VijayAnand.XFormsTemplates
 {
 	public class CustomActionWizard : IWizard
 	{
+		const string Colon = ":";
+
 		bool xamlOnly;
 		bool userCancel;
 
@@ -60,14 +62,26 @@ namespace VijayAnand.XFormsTemplates
 
 							var baseType = window.BaseType;
 							var genericType = window.GenericType;
-							var baseTypeCS = baseType.Contains(":") ? baseType.Substring(baseType.IndexOf(':') + 1) : baseType;
-							var genericTypeCS = genericType.Contains(":") ? genericType.Substring(genericType.IndexOf(':') + 1) : genericType;
+							var baseTypeCS = baseType.Contains(Colon) ? baseType.Substring(baseType.IndexOf(':') + 1) : baseType;
+							var genericTypeCS = genericType.Contains(Colon) ? genericType.Substring(genericType.IndexOf(':') + 1) : genericType;
 
 							if (!string.IsNullOrEmpty(baseType))
 							{
 								if (xamlItem)
 								{
+									string toolkit;
+
+									if (baseType.Contains(Colon) && string.Equals(baseType.Substring(0, baseType.IndexOf(':')), "xct", StringComparison.OrdinalIgnoreCase))
+									{
+										toolkit = bool.TrueString.ToLowerInvariant();
+									}
+									else
+									{
+										toolkit = bool.FalseString.ToLowerInvariant();
+									}
+
 									replacementsDictionary["$basetype$"] = baseType;
+									replacementsDictionary["$toolkit$"] = toolkit;
 
 									if (string.IsNullOrEmpty(genericTypeCS))
 									{
