@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="XFormsTemplates.2924dcc2-7ffd-4b48-8828-c830a2fab6e0" Version="1.10.0.0" Language="en-US" Publisher="Vijay Anand E G" />
+        <Identity Id="XFormsTemplates.2924dcc2-7ffd-4b48-8828-c830a2fab6e0" Version="1.10.2.0" Language="en-US" Publisher="Vijay Anand E G" />
         <DisplayName>Xamarin.Forms Project and Item Templates</DisplayName>
         <Description xml:space="preserve">Xamarin.Forms Project and Item Templates for building native apps for iOS, Android, UWP, macOS, Tizen from a single, shared C# codebase.</Description>
         <MoreInfo>https://egvijayanand.in/category/xamarin/</MoreInfo>
@@ -21,15 +21,6 @@
         </InstallationTarget>
         <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
             <ProductArchitecture>amd64</ProductArchitecture>
-        </InstallationTarget>
-        <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Community">
-            <ProductArchitecture>arm64</ProductArchitecture>
-        </InstallationTarget>
-        <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Pro">
-            <ProductArchitecture>arm64</ProductArchitecture>
-        </InstallationTarget>
-        <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
-            <ProductArchitecture>arm64</ProductArchitecture>
         </InstallationTarget>
     </Installation>
     <Prerequisites>

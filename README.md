@@ -59,7 +59,7 @@ Class library project template take the below optional parameters to override it
 * `-imt` | `--include-mvvm-toolkit` - Default value is `false`
 * `-ist` | `--include-shared-toolkit` - Default value is `false`
 
-Explicit option:
+Explicit options:
 
 * `-inm` | `--include-maps` - Default value is `false`
 * `-iei` | `--include-essentials-interfaces` - Default value is `false`
