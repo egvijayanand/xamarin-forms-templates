@@ -1,7 +1,19 @@
 Join me on Developer Thoughts (https://egvijayanand.in/), an exclusive blog for articles on Xamarin.Forms, .NET MAUI, and Blazor.
 
-What's new in ver. 1.9.0.0:
----------------------------
+This VS extension does not gather any usage or telemetry data, even anonymously, ensuring that you can use it freely and with complete privacy assurance.
+
+What's new in ver. 1.10.0.0:
+----------------------------
+1. Introduced an option to support the XML-based solution file (slnx) format.
+
+This would be an explicit option since the SLNX feature is currently in the preview stage and is only supported on VS2022.
+
+2. Introduced the option to include a reference to the PolySharp NuGet package.
+
+3. The Xamarin.Forms Templates Pack VS extension is now supported on both x64 and ARM64 installations of Visual Studio 2022. Happy coding!
+
+v1.9.0.0:
+
 Introduced an option to reference Xamarin.Forms.Maps NuGet package.
 
 While using the generic item template, support for adding Xamarin Community Toolkit namespace while defining base types with that particular xmlns scope (xct).
