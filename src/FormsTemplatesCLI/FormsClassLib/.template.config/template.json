@@ -45,6 +45,13 @@
             "replaces": "LIB_TFM",
             "defaultValue": "netstandard2.0"
         },
+        "use-slnx": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "Option to use XML-based solution file (slnx).",
+            "displayName": "Option to use XML-based solution file (sln_x)"
+        },
         "central-pkg-mgmt": {
             "type": "parameter",
             "datatype": "bool",
@@ -87,6 +94,13 @@
             "description": "If true, includes reference to the CommunityToolkit.Mvvm (aka Microsoft MVVM Toolkit) NuGet package.",
             "displayName": "Add CommunityToolkit.Mvvm (aka Microsoft MV_VM Toolkit) NuGet package reference"
         },
+        "include-polysharp": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "If true, includes reference to the PolySharp NuGet package.",
+            "displayName": "Add _PolySharp NuGet package reference"
+        },
         "include-shared-toolkit": {
             "type": "parameter",
             "datatype": "bool",
@@ -121,6 +135,13 @@
             "defaultValue": "false",
             "description": "Option to skip creating a solution file."
         },
+        "xmlEncodedName": {
+            "type": "derived",
+            "datatype": "string",
+            "replaces": "SAFE-NAME",
+            "valueSource": "name",
+            "valueTransform": "xmlEncode"
+        },
         "AddToolkit": {
             "type": "computed",
             "value": "(include-toolkit || all-supported-packages)"
@@ -145,6 +166,10 @@
             "type": "computed",
             "value": "(include-mvvm-toolkit || all-supported-packages)"
         },
+        "AddPolySharp": {
+            "type": "computed",
+            "value": "(include-polysharp)"
+        },
         "AddSharedToolkit": {
             "type": "computed",
             "value": "(include-shared-toolkit || all-supported-packages)"
@@ -152,6 +177,18 @@
         "CentralPkgMgmt": {
             "type": "computed",
             "value": "(central-pkg-mgmt)"
+        },
+        "SolnFile": {
+            "type": "computed",
+            "value": "(!no-solution-file)"
+        },
+        "UseSlnx": {
+            "type": "computed",
+            "value": "(use-slnx)"
+        },
+        "NoPolySharp": {
+            "type": "computed",
+            "value": "(!include-polysharp)"
         },
         "HostIdentifier": {
             "type": "bind",
@@ -167,9 +204,25 @@
         {
             "modifiers": [
                 {
-                    "condition": "(no-solution-file)",
+                    "condition": "(!SolnFile)",
+                    "exclude": [
+                        "FormsClassLib.1.sln",
+                        "FormsClassLib.1.xml"
+                    ]
+                },
+                {
+                    "condition": "(UseSlnx)",
                     "exclude": [
                         "FormsClassLib.1.sln"
+                    ],
+                    "rename": {
+                        "FormsClassLib.1.xml": "FormsClassLib.1.slnx"
+                    }
+                },
+                {
+                    "condition": "(!UseSlnx)",
+                    "exclude": [
+                        "FormsClassLib.1.xml"
                     ]
                 },
                 {

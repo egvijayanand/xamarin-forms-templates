@@ -7,6 +7,12 @@
         "Preview": {
             "longName": "preview",
             "shortName": "pre"
+        },
+        "include-polysharp": {
+            "shortName": "ips"
+        },
+        "use-slnx": {
+            "shortName": "slnx"
         }
     },
     "usageExamples": [

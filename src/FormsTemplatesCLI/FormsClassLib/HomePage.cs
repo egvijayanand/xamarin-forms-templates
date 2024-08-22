@@ -20,7 +20,7 @@ using Xamarin.CommunityToolkit.Effects;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.CommunityToolkit.UI.Views;
 #endif
-#if AddMarkup
+#if (AddMarkup || AddSharedToolkit)
 
 using Xamarin.CommunityToolkit.Markup;
 #endif
