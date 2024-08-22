@@ -40,6 +40,9 @@
         <!--#if (AddMvvmToolkit)-->
         <PackageReference Include="CommunityToolkit.Mvvm" />
         <!--#endif-->
+        <!--#if (AddPolySharp)-->
+        <PackageReference Include="PolySharp" />
+        <!--#endif-->
         <!--#if (AddSharedToolkit)-->
         <PackageReference Include="VijayAnand.Toolkit.Markup" />
         <!--#endif-->
@@ -62,6 +65,12 @@
         <!--#endif-->
         <!--#if (AddMvvmToolkit)-->
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
+        <!--#endif-->
+        <!--#if (AddPolySharp)-->
+        <PackageReference Include="PolySharp" Version="1.*">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
         <!--#endif-->
         <!--#if (AddSharedToolkit)-->
         <!--#if (Preview)-->

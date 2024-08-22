@@ -63,8 +63,35 @@ Explicit option:
 
 * `-inm` | `--include-maps` - Default value is `false`
 * `-iei` | `--include-essentials-interfaces` - Default value is `false`
+* `-ips` | `--include-polysharp` - Default value is `false`
+* `-slnx` | `--use-slnx` - Default value is `false`
 
 *Note: The NuGet package version being added out-of-the-box are v5.x for the Xamarin packages, v2.x for the Xamarin Toolkit packages, v1.x for the Xamarin.Essentials package, and v8.x for the MVVM Toolkit package. The latest stable version.*
+
+Starting with [v1.5.0](https://www.nuget.org/packages/VijayAnand.FormsTemplates/1.5.0), library project template take the below optional parameter support NuGet's Central Package Management (CPM) feature.
+
+* `-cpm` | `--central-pkg-mgmt` - Default value is `false`
+
+Starting with [v1.6.0](https://www.nuget.org/packages/VijayAnand.FormsTemplates/1.6.0), added the ability to reference the Xamarin.Essentials.Interfaces NuGet package.
+
+* `-iei` | `--include-essentials-interfaces` - Default value is `false`
+
+Starting with [v1.7.0](https://www.nuget.org/packages/VijayAnand.FormsTemplates/1.7.0), introduced the innovative Generic Item Templates for XAML and C#. Covered in detail [here](#generic-item-templates).
+
+Starting with [v1.8.0](https://www.nuget.org/packages/VijayAnand.FormsTemplates/1.8.0), added the ability to use the NuGet Central Package Management (CPM) feature within Visual Studio IDE.
+
+Starting with [v1.9.0](https://www.nuget.org/packages/VijayAnand.FormsTemplates/1.9.0), added the ability to reference the Xamarin.Forms.Maps NuGet package.
+
+* `-inm` | `--include-maps` - Default value is `false`
+
+Starting with [v1.10.0](https://www.nuget.org/packages/VijayAnand.FormsTemplates/1.10.0), introduced the option to reference the [PolySharp](https://www.nuget.org/packages/PolySharp) NuGet package and support for the XML-based solution file format (`slnx`).
+
+* `-ips` | `--include-polysharp` - Default value is `false`
+* `-slnx` | `--use-slnx` - Default value is `false`
+
+*This would be an explicit option since the SLNX feature is currently in the preview stage and is only supported on VS2022.*
+
+*Note: These options may also be combined.*
 
 |Item|Template Name|
 |:---:|:---:|

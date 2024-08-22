@@ -22,6 +22,12 @@
         <!--#if (AddMvvmToolkit)-->
         <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.2.2" />
         <!--#endif-->
+        <!--#if (AddPolySharp)-->
+        <PackageVersion Include="PolySharp" Version="1.14.1">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageVersion>
+        <!--#endif-->
         <!--#if (AddSharedToolkit)-->
         <!--#if (Preview)-->
         <PackageVersion Include="VijayAnand.Toolkit.Markup" Version="4.0.0-preview.3" />
