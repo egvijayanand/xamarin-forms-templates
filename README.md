@@ -2,6 +2,8 @@
 
 Join me on [**Developer Thoughts**](https://egvijayanand.in/), an exclusive blog for Xamarin.Forms, .NET MAUI, and Blazor with articles on working with it.
 
+**Since Xamarin.Forms is no longer officially supported, this repository has been archived. However, the CLI package will still be hosted on NuGet for installation. Installing the VS extension, though, requires the prerequisite of legacy Xamarin components to be set up in Visual Studio. Artifacts are also available for download on the Releases page.**
+
 Consult this [Xamarin.Forms Templates](https://egvijayanand.in/2024/01/26/introducing-xamarin-forms-templates/) article for further details.
 
 #### Available to install from
